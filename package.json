@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  },
+  "dependencies": {
+    "@capawesome-team/capacitor-bluetooth-low-energy": "^6.2.0",
+    "@capawesome-team/capacitor-file-compressor": "^6.1.0",
+    "@capawesome-team/capacitor-printer": "^6.1.0",
+    "@capawesome-team/capacitor-wifi": "^6.2.0",
+    "@capawesome-team/capacitor-zip": "^6.2.0"
+  }
+}

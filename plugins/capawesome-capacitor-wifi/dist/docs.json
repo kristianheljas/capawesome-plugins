@@ -1,0 +1,825 @@
+{
+  "api": {
+    "name": "WifiPlugin",
+    "slug": "wifiplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "connect",
+        "signature": "(options: ConnectOptions) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "ConnectOptions"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Connect to a Wi-Fi network.\n\nOnly available on Android and iOS.",
+        "complexTypes": [
+          "ConnectOptions"
+        ],
+        "slug": "connect"
+      },
+      {
+        "name": "disconnect",
+        "signature": "(options?: DisconnectOptions | undefined) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "DisconnectOptions | undefined"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Disconnect from a Wi-Fi network.\n\nOn **iOS**, you can only disconnect from networks that you connected to using the plugin.\nThis also removes the Wi-Fi network from the list of known networks.\n\nOnly available on Android and iOS.",
+        "complexTypes": [
+          "DisconnectOptions"
+        ],
+        "slug": "disconnect"
+      },
+      {
+        "name": "getAvailableNetworks",
+        "signature": "() => Promise<GetAvailableNetworksResult>",
+        "parameters": [],
+        "returns": "Promise<GetAvailableNetworksResult>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Get a list of Wi-Fi networks found during the last scan.\n\nThe returned networks are the most recently updated results, which may be from a previous scan\nif your current scan has not completed or succeeded.\n\nOnly available on Android.",
+        "complexTypes": [
+          "GetAvailableNetworksResult"
+        ],
+        "slug": "getavailablenetworks"
+      },
+      {
+        "name": "getIpAddress",
+        "signature": "() => Promise<GetIpAddressResult>",
+        "parameters": [],
+        "returns": "Promise<GetIpAddressResult>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Get the current IP address of the device.\n\nOnly available on Android and iOS.",
+        "complexTypes": [
+          "GetIpAddressResult"
+        ],
+        "slug": "getipaddress"
+      },
+      {
+        "name": "getRssi",
+        "signature": "() => Promise<GetRssiResult>",
+        "parameters": [],
+        "returns": "Promise<GetRssiResult>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Get the received signal strength indicator (RSSI) of the current network in dBm.\n\nOnly available on Android.",
+        "complexTypes": [
+          "GetRssiResult"
+        ],
+        "slug": "getrssi"
+      },
+      {
+        "name": "getSsid",
+        "signature": "() => Promise<GetSsidResult>",
+        "parameters": [],
+        "returns": "Promise<GetSsidResult>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Get the service set identifier (SSID) of the current network.\n\nOnly available on Android and iOS.",
+        "complexTypes": [
+          "GetSsidResult"
+        ],
+        "slug": "getssid"
+      },
+      {
+        "name": "isEnabled",
+        "signature": "() => Promise<IsEnabledResult>",
+        "parameters": [],
+        "returns": "Promise<IsEnabledResult>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Check if Wi-Fi is enabled.\n\nOnly available on Android.",
+        "complexTypes": [
+          "IsEnabledResult"
+        ],
+        "slug": "isenabled"
+      },
+      {
+        "name": "startScan",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Start a scan for Wi-Fi networks.\n\nThis call may fail for any of the following reasons:\n- Scan requests may be throttled because of too many scans in a short time.\n- The device is idle and scanning is disabled.\n- Wi-Fi hardware reports a scan failure.\n\nOnly available on Android.",
+        "complexTypes": [],
+        "slug": "startscan"
+      },
+      {
+        "name": "checkPermissions",
+        "signature": "() => Promise<PermissionStatus>",
+        "parameters": [],
+        "returns": "Promise<PermissionStatus>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Check permissions for the plugin.\n\nOnly available on Android and iOS.",
+        "complexTypes": [
+          "PermissionStatus"
+        ],
+        "slug": "checkpermissions"
+      },
+      {
+        "name": "requestPermissions",
+        "signature": "(options?: RequestPermissionsOptions | undefined) => Promise<PermissionStatus>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "RequestPermissionsOptions | undefined"
+          }
+        ],
+        "returns": "Promise<PermissionStatus>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Request permissions for the plugin.\n\nOnly available on Android and iOS.",
+        "complexTypes": [
+          "PermissionStatus",
+          "RequestPermissionsOptions"
+        ],
+        "slug": "requestpermissions"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: 'networksScanned', listenerFunc: (event: NetworksScannedEvent) => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "'networksScanned'"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "(event: NetworksScannedEvent) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Called when the scan results are available.\n\nOnly available on Android.",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "NetworksScannedEvent"
+        ],
+        "slug": "addlistenernetworksscanned"
+      },
+      {
+        "name": "removeAllListeners",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Remove all listeners for this plugin.",
+        "complexTypes": [],
+        "slug": "removealllisteners"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "ConnectOptions",
+      "slug": "connectoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "ssid",
+          "tags": [],
+          "docs": "The SSID of the network to connect to.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The password of the network to connect to.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "isHiddenSsid",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "false",
+              "name": "default"
+            },
+            {
+              "text": "https ://developer.android.com/reference/android/net/wifi/WifiNetworkSpecifier.Builder#setIsHiddenSsid(boolean)",
+              "name": "see"
+            }
+          ],
+          "docs": "Whether or not the SSID is hidden.\n\nOnly available on Android.",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        }
+      ]
+    },
+    {
+      "name": "DisconnectOptions",
+      "slug": "disconnectoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "ssid",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The SSID of the network to disconnect from.\nIf not provided, the device will disconnect from the current network.\n\nOnly available on iOS.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        }
+      ]
+    },
+    {
+      "name": "GetAvailableNetworksResult",
+      "slug": "getavailablenetworksresult",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "networks",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The list of Wi-Fi networks found during the last scan.",
+          "complexTypes": [
+            "Network"
+          ],
+          "type": "Network[]"
+        }
+      ]
+    },
+    {
+      "name": "Network",
+      "slug": "network",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "rssi",
+          "tags": [
+            {
+              "text": "6.1.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The received signal strength indicator (RSSI) of the network in dBm.",
+          "complexTypes": [],
+          "type": "number"
+        },
+        {
+          "name": "securityTypes",
+          "tags": [
+            {
+              "text": "6.1.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The service set identifier (SSID) of the network.\n\nOnly available on Android (SDK 33+).",
+          "complexTypes": [
+            "NetworkSecurityType"
+          ],
+          "type": "NetworkSecurityType[] | undefined"
+        },
+        {
+          "name": "ssid",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"MyNetwork\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The service set identifier (SSID) of the network.",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "GetIpAddressResult",
+      "slug": "getipaddressresult",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "address",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The IP address of the device.",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "GetRssiResult",
+      "slug": "getrssiresult",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "rssi",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The received signal strength indicator (RSSI) of the current network in dBm.",
+          "complexTypes": [],
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "name": "GetSsidResult",
+      "slug": "getssidresult",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "ssid",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The service set identifier (SSID) of the current network.\n\nOn **iOS 14+**, the SSID can only be retrieved if the network was connected to using the plugin\nor if the app has permission to access precise location.",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "IsEnabledResult",
+      "slug": "isenabledresult",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "enabled",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "Whether or not Wi-Fi is enabled.",
+          "complexTypes": [],
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "name": "PermissionStatus",
+      "slug": "permissionstatus",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "location",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "",
+          "complexTypes": [
+            "PermissionState"
+          ],
+          "type": "PermissionState"
+        }
+      ]
+    },
+    {
+      "name": "RequestPermissionsOptions",
+      "slug": "requestpermissionsoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "permissions",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "[\"location\"]",
+              "name": "default"
+            }
+          ],
+          "docs": "The permissions to request.",
+          "complexTypes": [
+            "PermissionType"
+          ],
+          "type": "'location'[] | undefined"
+        }
+      ]
+    },
+    {
+      "name": "PluginListenerHandle",
+      "slug": "pluginlistenerhandle",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "remove",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "() => Promise<void>"
+        }
+      ]
+    },
+    {
+      "name": "NetworksScannedEvent",
+      "slug": "networksscannedevent",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "networks",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The list of Wi-Fi networks found during the scan.",
+          "complexTypes": [
+            "Network"
+          ],
+          "type": "Network[]"
+        }
+      ]
+    }
+  ],
+  "enums": [
+    {
+      "name": "NetworkSecurityType",
+      "slug": "networksecuritytype",
+      "members": [
+        {
+          "name": "UNKNOWN",
+          "value": "-1",
+          "tags": [
+            {
+              "text": "6.1.0",
+              "name": "since"
+            }
+          ],
+          "docs": "Unknown security type."
+        },
+        {
+          "name": "OPEN",
+          "value": "0",
+          "tags": [
+            {
+              "text": "6.1.0",
+              "name": "since"
+            }
+          ],
+          "docs": "Open network."
+        },
+        {
+          "name": "WEP",
+          "value": "1",
+          "tags": [
+            {
+              "text": "6.1.0",
+              "name": "since"
+            }
+          ],
+          "docs": "WEP network."
+        },
+        {
+          "name": "PSK",
+          "value": "2",
+          "tags": [
+            {
+              "text": "6.1.0",
+              "name": "since"
+            }
+          ],
+          "docs": "PSK network."
+        },
+        {
+          "name": "EAP",
+          "value": "3",
+          "tags": [
+            {
+              "text": "6.1.0",
+              "name": "since"
+            }
+          ],
+          "docs": "EAP network."
+        },
+        {
+          "name": "SAE",
+          "value": "4",
+          "tags": [
+            {
+              "text": "6.1.0",
+              "name": "since"
+            }
+          ],
+          "docs": "SAE network."
+        },
+        {
+          "name": "EAP_WPA3_ENTERPRISE_192_BIT",
+          "value": "5",
+          "tags": [
+            {
+              "text": "6.1.0",
+              "name": "since"
+            }
+          ],
+          "docs": "WPA3-Enterprise in 192-bit security network."
+        },
+        {
+          "name": "OWE",
+          "value": "6",
+          "tags": [
+            {
+              "text": "6.1.0",
+              "name": "since"
+            }
+          ],
+          "docs": "OWE network."
+        },
+        {
+          "name": "WAPI_PSK",
+          "value": "7",
+          "tags": [
+            {
+              "text": "6.1.0",
+              "name": "since"
+            }
+          ],
+          "docs": "WAPI PSK network."
+        },
+        {
+          "name": "WAPI_CERT",
+          "value": "8",
+          "tags": [
+            {
+              "text": "6.1.0",
+              "name": "since"
+            }
+          ],
+          "docs": "WAPI Certificate network."
+        },
+        {
+          "name": "WPA3_ENTERPRISE",
+          "value": "9",
+          "tags": [
+            {
+              "text": "6.1.0",
+              "name": "since"
+            }
+          ],
+          "docs": "WPA3-Enterprise network."
+        },
+        {
+          "name": "OSEN",
+          "value": "10",
+          "tags": [
+            {
+              "text": "6.1.0",
+              "name": "since"
+            }
+          ],
+          "docs": "OSEN network."
+        },
+        {
+          "name": "PASSPOINT_R1_R2",
+          "value": "11",
+          "tags": [
+            {
+              "text": "6.1.0",
+              "name": "since"
+            }
+          ],
+          "docs": "Passpoint R1/R2 network, where TKIP and WEP are not allowed."
+        },
+        {
+          "name": "PASSPOINT_R3",
+          "value": "12",
+          "tags": [
+            {
+              "text": "6.1.0",
+              "name": "since"
+            }
+          ],
+          "docs": "Passpoint R3 network, where TKIP and WEP are not allowed, and PMF must be set to Required."
+        },
+        {
+          "name": "DPP",
+          "value": "13",
+          "tags": [
+            {
+              "text": "6.1.0",
+              "name": "since"
+            }
+          ],
+          "docs": "Easy Connect (DPP) network."
+        }
+      ]
+    }
+  ],
+  "typeAliases": [
+    {
+      "name": "PermissionState",
+      "slug": "permissionstate",
+      "docs": "",
+      "types": [
+        {
+          "text": "'prompt'",
+          "complexTypes": []
+        },
+        {
+          "text": "'prompt-with-rationale'",
+          "complexTypes": []
+        },
+        {
+          "text": "'granted'",
+          "complexTypes": []
+        },
+        {
+          "text": "'denied'",
+          "complexTypes": []
+        }
+      ]
+    },
+    {
+      "name": "PermissionType",
+      "slug": "permissiontype",
+      "docs": "",
+      "types": [
+        {
+          "text": "'location'",
+          "complexTypes": []
+        }
+      ]
+    }
+  ],
+  "pluginConfigs": []
+}

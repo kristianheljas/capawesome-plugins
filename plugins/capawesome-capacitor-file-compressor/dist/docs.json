@@ -1,0 +1,168 @@
+{
+  "api": {
+    "name": "FileCompressorPlugin",
+    "slug": "filecompressorplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "compressImage",
+        "signature": "(options: CompressImageOptions) => Promise<CompressImageResult>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "CompressImageOptions"
+          }
+        ],
+        "returns": "Promise<CompressImageResult>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "5.0.0"
+          }
+        ],
+        "docs": "Compress an image.\n\nOnly png, jpeg, and webp images are supported.\n\n**Attention**: The exif data of the image is lost during compression.",
+        "complexTypes": [
+          "CompressImageResult",
+          "CompressImageOptions"
+        ],
+        "slug": "compressimage"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "CompressImageResult",
+      "slug": "compressimageresult",
+      "docs": "",
+      "tags": [
+        {
+          "text": "5.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "path",
+          "tags": [
+            {
+              "text": "5.0.0",
+              "name": "since"
+            },
+            {
+              "text": "'content://com.android.providers.downloads.documents/document/msf%3A1000000353'",
+              "name": "example"
+            }
+          ],
+          "docs": "The path of the compressed file.\n\nOnly available on Android and iOS.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "blob",
+          "tags": [
+            {
+              "text": "5.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The blob of the compressed file.\n\nOnly available on Web.",
+          "complexTypes": [
+            "Blob"
+          ],
+          "type": "Blob"
+        }
+      ]
+    },
+    {
+      "name": "CompressImageOptions",
+      "slug": "compressimageoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "5.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "blob",
+          "tags": [
+            {
+              "text": "5.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The blob of the file to compress.\n\nOnly available on Web.",
+          "complexTypes": [
+            "Blob"
+          ],
+          "type": "Blob"
+        },
+        {
+          "name": "mimeType",
+          "tags": [
+            {
+              "text": "5.0.0",
+              "name": "since"
+            },
+            {
+              "text": "'image/jpeg'",
+              "name": "example"
+            },
+            {
+              "text": "'image/jpeg'",
+              "name": "default"
+            }
+          ],
+          "docs": "The mime type of the compressed file.\n\nOn Android, only `image/jpeg` and `image/webp` are supported.\nOn iOS, only `image/jpeg` is supported.\nOn Web, only `image/jpeg` and `image/webp` are supported.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "path",
+          "tags": [
+            {
+              "text": "5.0.0",
+              "name": "since"
+            },
+            {
+              "text": "'content://com.android.providers.downloads.documents/document/msf%3A1000000485'",
+              "name": "example"
+            }
+          ],
+          "docs": "The path of the file to compress.\n\nOnly available on Android and iOS.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "quality",
+          "tags": [
+            {
+              "text": "5.0.0",
+              "name": "since"
+            },
+            {
+              "text": "0.6",
+              "name": "default"
+            },
+            {
+              "text": "0.7",
+              "name": "example"
+            }
+          ],
+          "docs": "The quality of the resulting image, expressed as a value from `0.0` to `1.0`.\n\nThe value `0.0` represents the maximum compression (or lowest quality)\nwhile the value `1.0` represents the least compression (or best quality).",
+          "complexTypes": [],
+          "type": "number | undefined"
+        }
+      ]
+    }
+  ],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": []
+}

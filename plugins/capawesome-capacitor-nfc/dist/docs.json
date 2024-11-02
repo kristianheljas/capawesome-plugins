@@ -1,0 +1,1797 @@
+{
+  "api": {
+    "name": "NfcPlugin",
+    "slug": "nfcplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "startScanSession",
+        "signature": "(options?: StartScanSessionOptions | undefined) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "StartScanSessionOptions | undefined"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.0.1"
+          }
+        ],
+        "docs": "Start a scan session.\nOnly one session can be active at a time.\n\nStop the session as soon as you are done using `stopScanSession(...)`.\n\nOn iOS, this will trigger the NFC Reader Session alert.",
+        "complexTypes": [
+          "StartScanSessionOptions"
+        ],
+        "slug": "startscansession"
+      },
+      {
+        "name": "stopScanSession",
+        "signature": "(options?: StopScanSessionOptions | undefined) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "StopScanSessionOptions | undefined"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.0.1"
+          }
+        ],
+        "docs": "Stop the active scan session.",
+        "complexTypes": [
+          "StopScanSessionOptions"
+        ],
+        "slug": "stopscansession"
+      },
+      {
+        "name": "write",
+        "signature": "(options: WriteOptions) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "WriteOptions"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.0.1"
+          }
+        ],
+        "docs": "Write to a NFC tag.\n\nThis method must be called from within a `nfcTagScanned` handler.",
+        "complexTypes": [
+          "WriteOptions"
+        ],
+        "slug": "write"
+      },
+      {
+        "name": "makeReadOnly",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.0.1"
+          }
+        ],
+        "docs": "Make a NFC tag readonly.\n\nThis method must be called from within a `nfcTagScanned` handler.\n\n**Attention:** This is permanent and can not be undone.",
+        "complexTypes": [],
+        "slug": "makereadonly"
+      },
+      {
+        "name": "erase",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.3.0"
+          }
+        ],
+        "docs": "Erase the NFC tag by writing an empty NDEF message.\n\nThis method must be called from within a `nfcTagScanned` handler.",
+        "complexTypes": [],
+        "slug": "erase"
+      },
+      {
+        "name": "format",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.3.0"
+          }
+        ],
+        "docs": "Format the NFC tag as NDEF and write an empty NDEF message.\n\nThis method must be called from within a `nfcTagScanned` handler.\n\nOnly available on Android.",
+        "complexTypes": [],
+        "slug": "format"
+      },
+      {
+        "name": "transceive",
+        "signature": "(options: TransceiveOptions) => Promise<TransceiveResult>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "TransceiveOptions"
+          }
+        ],
+        "returns": "Promise<TransceiveResult>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.3.0"
+          }
+        ],
+        "docs": "Send raw command to the tag and receive the response.\n\nThis method must be called from within a `nfcTagScanned` handler.\n\nOn **Android**, the tag must be connected with `connect()` first.\n\n⚠️ **Experimental:** This method could not be tested extensively yet.\nPlease let us know if you discover any issues!\n\n⚠️ **Attention**: A bad command can damage the tag forever.\nPlease read the Android and iOS documentation linked below first.\n\nMore information on how to use this method on **Android**: https://bit.ly/3ywSkvT\n\nMore information on how to use this method on **iOS** with...\n- ISO 15693-3: https://apple.co/3Lliaum\n- FeliCa: https://apple.co/3LpvRs6\n\nOnly available on Android and iOS.",
+        "complexTypes": [
+          "TransceiveResult",
+          "TransceiveOptions"
+        ],
+        "slug": "transceive"
+      },
+      {
+        "name": "connect",
+        "signature": "(options: ConnectOptions) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "ConnectOptions"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Connect to the tag and enable I/O operations.\n\nThis method must be called from within a `nfcTagScanned` handler.\n\nOnly available on Android.",
+        "complexTypes": [
+          "ConnectOptions"
+        ],
+        "slug": "connect"
+      },
+      {
+        "name": "close",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Close the connection to the tag.\n\nThis method must be called from within a `nfcTagScanned` handler.\n\nOnly available on Android.",
+        "complexTypes": [],
+        "slug": "close"
+      },
+      {
+        "name": "isSupported",
+        "signature": "() => Promise<IsSupportedResult>",
+        "parameters": [],
+        "returns": "Promise<IsSupportedResult>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.0.1"
+          }
+        ],
+        "docs": "Returns whether or not NFC is supported.",
+        "complexTypes": [
+          "IsSupportedResult"
+        ],
+        "slug": "issupported"
+      },
+      {
+        "name": "isEnabled",
+        "signature": "() => Promise<IsEnabledResult>",
+        "parameters": [],
+        "returns": "Promise<IsEnabledResult>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.0.1"
+          }
+        ],
+        "docs": "Returns whether or not NFC is enabled.\n\nOnly available on Android.",
+        "complexTypes": [
+          "IsEnabledResult"
+        ],
+        "slug": "isenabled"
+      },
+      {
+        "name": "openSettings",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.0.1"
+          }
+        ],
+        "docs": "Opens the NFC device settings so that the user can enable or disable NFC.\n\nOnly available on Android.",
+        "complexTypes": [],
+        "slug": "opensettings"
+      },
+      {
+        "name": "getAntennaInfo",
+        "signature": "() => Promise<GetAntennaInfoResult>",
+        "parameters": [],
+        "returns": "Promise<GetAntennaInfoResult>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.1.0"
+          }
+        ],
+        "docs": "Returns information regarding Nfc antennas on the device such as their relative positioning on the device.\n\nOnly available on Android.",
+        "complexTypes": [
+          "GetAntennaInfoResult"
+        ],
+        "slug": "getantennainfo"
+      },
+      {
+        "name": "setAlertMessage",
+        "signature": "(options: SetAlertMessageOptions) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "SetAlertMessageOptions"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.2.0"
+          },
+          {
+            "name": "see",
+            "text": "https ://developer.apple.com/documentation/corenfc/nfcreadersession/2919987-alertmessage"
+          }
+        ],
+        "docs": "Set a custom message, which is displayed in the NFC Reader Session alert.\n\nOnly available on iOS.",
+        "complexTypes": [
+          "SetAlertMessageOptions"
+        ],
+        "slug": "setalertmessage"
+      },
+      {
+        "name": "checkPermissions",
+        "signature": "() => Promise<PermissionResult>",
+        "parameters": [],
+        "returns": "Promise<PermissionResult>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.0.1"
+          }
+        ],
+        "docs": "Check permission for reading and writing NFC tags.\n\nThis method is only needed on Web.\nOn Android and iOS, `granted` is always returned.",
+        "complexTypes": [
+          "PermissionResult"
+        ],
+        "slug": "checkpermissions"
+      },
+      {
+        "name": "requestPermissions",
+        "signature": "() => Promise<PermissionResult>",
+        "parameters": [],
+        "returns": "Promise<PermissionResult>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.0.1"
+          }
+        ],
+        "docs": "Request permission for reading and writing NFC tags.\n\nThis method is only needed on Web.\nOn Android and iOS, `granted` is always returned.",
+        "complexTypes": [
+          "PermissionResult"
+        ],
+        "slug": "requestpermissions"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: 'nfcTagScanned', listenerFunc: (event: NfcTagScannedEvent) => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "'nfcTagScanned'"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "(event: NfcTagScannedEvent) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.0.1"
+          }
+        ],
+        "docs": "Called when a new NFC tag is scanned.",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "NfcTagScannedEvent"
+        ],
+        "slug": "addlistenernfctagscanned-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: 'scanSessionCanceled', listenerFunc: () => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "'scanSessionCanceled'"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "() => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.0.1"
+          }
+        ],
+        "docs": "Called when the scan session was canceled.\n\nOnly available on iOS.",
+        "complexTypes": [
+          "PluginListenerHandle"
+        ],
+        "slug": "addlistenerscansessioncanceled-"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: 'scanSessionError', listenerFunc: (event: ScanSessionErrorEvent) => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "'scanSessionError'"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "(event: ScanSessionErrorEvent) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.0.1"
+          }
+        ],
+        "docs": "Called when an error occurs during the scan session.",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "ScanSessionErrorEvent"
+        ],
+        "slug": "addlistenerscansessionerror-"
+      },
+      {
+        "name": "removeAllListeners",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.0.1"
+          }
+        ],
+        "docs": "Remove all listeners for this plugin.",
+        "complexTypes": [],
+        "slug": "removealllisteners"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "StartScanSessionOptions",
+      "slug": "startscansessionoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "0.0.1",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "alertMessage",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            },
+            {
+              "text": "'Hold your iPhone near the NFC tag.'",
+              "name": "example"
+            },
+            {
+              "text": "https ://developer.apple.com/documentation/corenfc/nfcreadersession/2919987-alertmessage",
+              "name": "see"
+            }
+          ],
+          "docs": "A custom message, which is displayed in the NFC Reader Session alert.\n\nOnly available on iOS.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "techTypes",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The NFC tag technologies to filter on in this session.\n\nOnly available on Android.",
+          "complexTypes": [
+            "NfcTagTechType"
+          ],
+          "type": "NfcTagTechType[] | undefined"
+        },
+        {
+          "name": "mimeTypes",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "Mime types to filter on in this session.\n\nOnly available on Android.",
+          "complexTypes": [],
+          "type": "string[] | undefined"
+        },
+        {
+          "name": "pollingOptions",
+          "tags": [
+            {
+              "text": "[PollingOption.iso14443, PollingOption.iso15693]",
+              "name": "default"
+            },
+            {
+              "text": "0.2.0",
+              "name": "since"
+            }
+          ],
+          "docs": "Type of tags to detect during a polling sequence.\n\nOnly available on iOS.",
+          "complexTypes": [
+            "PollingOption"
+          ],
+          "type": "PollingOption[] | undefined"
+        }
+      ]
+    },
+    {
+      "name": "StopScanSessionOptions",
+      "slug": "stopscansessionoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "0.0.1",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "errorMessage",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "A custom error message, which is displayed in the NFC Reader Session alert.\n\nOnly available on iOS.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        }
+      ]
+    },
+    {
+      "name": "WriteOptions",
+      "slug": "writeoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "0.0.1",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "message",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The NDEF message to write.",
+          "complexTypes": [
+            "NdefMessage"
+          ],
+          "type": "NdefMessage"
+        }
+      ]
+    },
+    {
+      "name": "NdefMessage",
+      "slug": "ndefmessage",
+      "docs": "",
+      "tags": [
+        {
+          "text": "0.0.1",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "records",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The records of the NDEF message.",
+          "complexTypes": [
+            "NdefRecord"
+          ],
+          "type": "NdefRecord[]"
+        }
+      ]
+    },
+    {
+      "name": "NdefRecord",
+      "slug": "ndefrecord",
+      "docs": "",
+      "tags": [
+        {
+          "text": "0.0.1",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "id",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The record identifier as byte array.",
+          "complexTypes": [],
+          "type": "number[] | undefined"
+        },
+        {
+          "name": "payload",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The payload field data as byte array.",
+          "complexTypes": [],
+          "type": "number[] | undefined"
+        },
+        {
+          "name": "tnf",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The record type name format which indicates the structure of\nthe value of the `type` field.",
+          "complexTypes": [
+            "TypeNameFormat"
+          ],
+          "type": "TypeNameFormat"
+        },
+        {
+          "name": "type",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The type of the record payload.\nThis should be used in conjunction with the `tnf` field to determine\nthe payload format.",
+          "complexTypes": [],
+          "type": "number[] | undefined"
+        }
+      ]
+    },
+    {
+      "name": "TransceiveResult",
+      "slug": "transceiveresult",
+      "docs": "",
+      "tags": [
+        {
+          "text": "0.3.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "response",
+          "tags": [
+            {
+              "text": "0.3.0",
+              "name": "since"
+            }
+          ],
+          "docs": "Bytes received in response.",
+          "complexTypes": [],
+          "type": "number[]"
+        }
+      ]
+    },
+    {
+      "name": "TransceiveOptions",
+      "slug": "transceiveoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "0.3.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "techType",
+          "tags": [
+            {
+              "text": "0.3.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The NFC tag technology to connect with.\n\nOnly available on iOS.",
+          "complexTypes": [
+            "NfcTagTechType"
+          ],
+          "type": "NfcTagTechType"
+        },
+        {
+          "name": "data",
+          "tags": [
+            {
+              "text": "0.3.0",
+              "name": "since"
+            }
+          ],
+          "docs": "Bytes to send.",
+          "complexTypes": [],
+          "type": "number[]"
+        },
+        {
+          "name": "iso15693RequestFlags",
+          "tags": [
+            {
+              "text": "0.3.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The request flags for the NFC tag technology type `NfcV` (ISO 15693-3).\n\nOnly available on iOS 14+",
+          "complexTypes": [
+            "Iso15693RequestFlag"
+          ],
+          "type": "Iso15693RequestFlag[] | undefined"
+        },
+        {
+          "name": "iso15693CommandCode",
+          "tags": [
+            {
+              "text": "0.3.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The custom command code defined by the IC manufacturer for the NFC tag\ntechnology type `NfcV` (ISO 15693-3).\nValid range is 0xA0 to 0xDF inclusively, 0x23 is also supported.\n\nOnly available on iOS 14+",
+          "complexTypes": [],
+          "type": "number | undefined"
+        }
+      ]
+    },
+    {
+      "name": "ConnectOptions",
+      "slug": "connectoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "techType",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The NFC tag technology to connect with.\n\nOnly available on Android.",
+          "complexTypes": [
+            "NfcTagTechType"
+          ],
+          "type": "NfcTagTechType"
+        }
+      ]
+    },
+    {
+      "name": "IsSupportedResult",
+      "slug": "issupportedresult",
+      "docs": "",
+      "tags": [
+        {
+          "text": "0.0.1",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "isSupported",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "",
+          "complexTypes": [],
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "name": "IsEnabledResult",
+      "slug": "isenabledresult",
+      "docs": "",
+      "tags": [
+        {
+          "text": "0.0.1",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "isEnabled",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "",
+          "complexTypes": [],
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "name": "GetAntennaInfoResult",
+      "slug": "getantennainforesult",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.1.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "availableAntennas",
+          "tags": [
+            {
+              "text": "6.1.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The available NFC antennas on the device.",
+          "complexTypes": [
+            "Antenna"
+          ],
+          "type": "Antenna[]"
+        },
+        {
+          "name": "deviceHeight",
+          "tags": [
+            {
+              "text": "6.1.0",
+              "name": "since"
+            },
+            {
+              "text": "200",
+              "name": "example"
+            }
+          ],
+          "docs": "The height of the device in millimeters.",
+          "complexTypes": [],
+          "type": "number"
+        },
+        {
+          "name": "deviceWidth",
+          "tags": [
+            {
+              "text": "6.1.0",
+              "name": "since"
+            },
+            {
+              "text": "100",
+              "name": "example"
+            }
+          ],
+          "docs": "The width of the device in millimeters.",
+          "complexTypes": [],
+          "type": "number"
+        },
+        {
+          "name": "isDeviceFoldable",
+          "tags": [
+            {
+              "text": "6.1.0",
+              "name": "since"
+            },
+            {
+              "text": "true",
+              "name": "example"
+            }
+          ],
+          "docs": "Whether or not the device is foldable.",
+          "complexTypes": [],
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "name": "Antenna",
+      "slug": "antenna",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.1.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "locationX",
+          "tags": [
+            {
+              "text": "6.1.0",
+              "name": "since"
+            },
+            {
+              "text": "50",
+              "name": "example"
+            }
+          ],
+          "docs": "The location of the NFC antenna on the X axis in millimeters.",
+          "complexTypes": [],
+          "type": "number"
+        },
+        {
+          "name": "locationY",
+          "tags": [
+            {
+              "text": "6.1.0",
+              "name": "since"
+            },
+            {
+              "text": "100",
+              "name": "example"
+            }
+          ],
+          "docs": "The location of the NFC antenna on the Y axis in millimeters.",
+          "complexTypes": [],
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "name": "SetAlertMessageOptions",
+      "slug": "setalertmessageoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.2.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "message",
+          "tags": [
+            {
+              "text": "6.2.0",
+              "name": "since"
+            },
+            {
+              "text": "'Hold your iPhone near the NFC tag.'",
+              "name": "example"
+            }
+          ],
+          "docs": "The custom message, which is displayed in the NFC Reader Session alert.",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "PermissionResult",
+      "slug": "permissionresult",
+      "docs": "",
+      "tags": [
+        {
+          "text": "0.0.1",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "nfc",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "Permission state for reading and writing NFC tags.",
+          "complexTypes": [
+            "PermissionState"
+          ],
+          "type": "PermissionState"
+        }
+      ]
+    },
+    {
+      "name": "PluginListenerHandle",
+      "slug": "pluginlistenerhandle",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "remove",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "() => Promise<void>"
+        }
+      ]
+    },
+    {
+      "name": "NfcTagScannedEvent",
+      "slug": "nfctagscannedevent",
+      "docs": "",
+      "tags": [
+        {
+          "text": "0.0.1",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "nfcTag",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The scanned NFC tag.",
+          "complexTypes": [
+            "NfcTag"
+          ],
+          "type": "NfcTag"
+        }
+      ]
+    },
+    {
+      "name": "NfcTag",
+      "slug": "nfctag",
+      "docs": "",
+      "tags": [
+        {
+          "text": "0.0.1",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "atqa",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The ATQA/SENS_RES bytes of an NFC A tag.\n\nOnly available on Android.",
+          "complexTypes": [],
+          "type": "number[] | undefined"
+        },
+        {
+          "name": "applicationData",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The Application Data bytes from ATQB/SENSB_RES of an NFC B tag.\n\nOnly available on Android and iOS.",
+          "complexTypes": [],
+          "type": "number[] | undefined"
+        },
+        {
+          "name": "barcode",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The barcode bytes of an NfcBarcode tag.\n\nOnly available on Android.",
+          "complexTypes": [],
+          "type": "number[] | undefined"
+        },
+        {
+          "name": "canMakeReadOnly",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "Whether the NDEF tag can be made read-only or not.\n\nOnly available on Android.",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "dsfId",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The DSF ID bytes of an NFC V tag.\n\nOnly available on Android.",
+          "complexTypes": [],
+          "type": "number[] | undefined"
+        },
+        {
+          "name": "hiLayerResponse",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The higher layer response bytes of an ISO-DEP tag.\n\nOnly available on Android.",
+          "complexTypes": [],
+          "type": "number[] | undefined"
+        },
+        {
+          "name": "historicalBytes",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The historical bytes of an ISO-DEP tag.\n\nOnly available on Android and iOS.",
+          "complexTypes": [],
+          "type": "number[] | undefined"
+        },
+        {
+          "name": "id",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The tag identifier (low level serial number)\nwhich is used for anti-collision and identification.",
+          "complexTypes": [],
+          "type": "number[] | undefined"
+        },
+        {
+          "name": "isWritable",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "Whether the NDEF tag is writable or not.\n\nOnly available on Android and iOS.",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "manufacturer",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The Manufacturer bytes of an NFC F tag.\n\nOnly available on Android and iOS.",
+          "complexTypes": [],
+          "type": "number[] | undefined"
+        },
+        {
+          "name": "maxSize",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The maximum NDEF message size in bytes.\n\nOnly available on Android and iOS.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        },
+        {
+          "name": "message",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The NDEF-formatted message.",
+          "complexTypes": [
+            "NdefMessage"
+          ],
+          "type": "NdefMessage"
+        },
+        {
+          "name": "protocolInfo",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The Protocol Info bytes from ATQB/SENSB_RES of an NFC B tag.\n\nOnly available on Android.",
+          "complexTypes": [],
+          "type": "number[] | undefined"
+        },
+        {
+          "name": "responseFlags",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The Response Flag bytes of an NFC V tag.\n\nOnly available on Android.",
+          "complexTypes": [],
+          "type": "number[] | undefined"
+        },
+        {
+          "name": "sak",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The SAK/SEL_RES bytes of an NFC A tag.\n\nOnly available on Android.",
+          "complexTypes": [],
+          "type": "number[] | undefined"
+        },
+        {
+          "name": "systemCode",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The System Code bytes of an NFC F tag.\n\nOnly available on Android and iOS.",
+          "complexTypes": [],
+          "type": "number[] | undefined"
+        },
+        {
+          "name": "techTypes",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The technologies available in this tag.\n\nOnly available on Android and iOS.",
+          "complexTypes": [
+            "NfcTagTechType"
+          ],
+          "type": "NfcTagTechType[] | undefined"
+        },
+        {
+          "name": "type",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The NDEF tag type.\n\nOnly available on Android and iOS.",
+          "complexTypes": [
+            "NfcTagType"
+          ],
+          "type": "NfcTagType"
+        }
+      ]
+    },
+    {
+      "name": "ScanSessionErrorEvent",
+      "slug": "scansessionerrorevent",
+      "docs": "",
+      "tags": [
+        {
+          "text": "0.0.1",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "message",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The error message.",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "enums": [
+    {
+      "name": "NfcTagTechType",
+      "slug": "nfctagtechtype",
+      "members": [
+        {
+          "name": "NfcA",
+          "value": "'NFC_A'",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The NFC-A (ISO 14443-3A) tag technology.\n\nOnly available on Android."
+        },
+        {
+          "name": "NfcB",
+          "value": "'NFC_B'",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The NFC-B (ISO 14443-3B) tag technology.\n\nOnly available on Android."
+        },
+        {
+          "name": "NfcF",
+          "value": "'NFC_F'",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The NFC-F (JIS 6319-4) tag technology.\n\nOnly available on Android and iOS."
+        },
+        {
+          "name": "NfcV",
+          "value": "'NFC_V'",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The NFC-V (ISO 15693) tag technology.\n\nOnly available on Android and iOS."
+        },
+        {
+          "name": "IsoDep",
+          "value": "'ISO_DEP'",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The ISO-DEP (ISO 14443-4) tag technology.\n\nOnly available on Android."
+        },
+        {
+          "name": "Iso7816",
+          "value": "'ISO_7816'",
+          "tags": [
+            {
+              "text": "5.1.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The ISO 7816 tag technology.\n\nOnly available on iOS."
+        },
+        {
+          "name": "Ndef",
+          "value": "'NDEF'",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The NDEF tag technology.\n\nOnly available on Android."
+        },
+        {
+          "name": "MifareClassic",
+          "value": "'MIFARE_CLASSIC'",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The MIFARE Classic tag technology.\n\nOnly available on Android."
+        },
+        {
+          "name": "MifareDesfire",
+          "value": "'MIFARE_DESFIRE'",
+          "tags": [
+            {
+              "text": "5.1.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The MIFARE Desfire tag technology.\n\nOnly available on iOS."
+        },
+        {
+          "name": "MifarePlus",
+          "value": "'MIFARE_PLUS'",
+          "tags": [
+            {
+              "text": "5.1.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The MIFARE Plus tag technology.\n\nOnly available on iOS."
+        },
+        {
+          "name": "MifareUltralight",
+          "value": "'MIFARE_ULTRALIGHT'",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The MIFARE Ultralight tag technology.\n\nOnly available on Android and iOS."
+        },
+        {
+          "name": "NfcBarcode",
+          "value": "'NFC_BARCODE'",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The technology of a tag containing just a barcode.\n\nOnly available on Android."
+        },
+        {
+          "name": "NdefFormatable",
+          "value": "'NDEF_FORMATABLE'",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The NDEF formatable tag technology.\n\nOnly available on Android."
+        }
+      ]
+    },
+    {
+      "name": "PollingOption",
+      "slug": "pollingoption",
+      "members": [
+        {
+          "name": "iso14443",
+          "value": "'iso14443'",
+          "tags": [
+            {
+              "text": "0.2.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The option for detecting ISO 7816-compatible and MIFARE tags."
+        },
+        {
+          "name": "iso15693",
+          "value": "'iso15693'",
+          "tags": [
+            {
+              "text": "0.2.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The option for detecting ISO 15693 tags."
+        },
+        {
+          "name": "iso18092",
+          "value": "'iso18092'",
+          "tags": [
+            {
+              "text": "0.2.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The option for detecting FeliCa tags."
+        }
+      ]
+    },
+    {
+      "name": "TypeNameFormat",
+      "slug": "typenameformat",
+      "members": [
+        {
+          "name": "Empty",
+          "value": "0",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "An empty record with no type or payload."
+        },
+        {
+          "name": "WellKnown",
+          "value": "1",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "A predefined type defined in the RTD specification of the NFC Forum."
+        },
+        {
+          "name": "MimeMedia",
+          "value": "2",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "An Internet media type as defined in RFC 2046."
+        },
+        {
+          "name": "AbsoluteUri",
+          "value": "3",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "A URI as defined in RFC 3986."
+        },
+        {
+          "name": "External",
+          "value": "4",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "A user-defined value that is based on the rules of the\nNFC Forum Record Type Definition specification."
+        },
+        {
+          "name": "Unknown",
+          "value": "5",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "Type is unknown."
+        },
+        {
+          "name": "Unchanged",
+          "value": "6",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "Indicates the payload is an intermediate or final chunk\nof a chunked NDEF Record."
+        }
+      ]
+    },
+    {
+      "name": "Iso15693RequestFlag",
+      "slug": "iso15693requestflag",
+      "members": [
+        {
+          "name": "address",
+          "value": "'address'",
+          "tags": [
+            {
+              "text": "0.3.0",
+              "name": "since"
+            }
+          ],
+          "docs": ""
+        },
+        {
+          "name": "commandSpecificBit8",
+          "value": "'commandSpecificBit8'",
+          "tags": [
+            {
+              "text": "0.3.0",
+              "name": "since"
+            }
+          ],
+          "docs": ""
+        },
+        {
+          "name": "dualSubCarriers",
+          "value": "'dualSubCarriers'",
+          "tags": [
+            {
+              "text": "0.3.0",
+              "name": "since"
+            }
+          ],
+          "docs": ""
+        },
+        {
+          "name": "highDataRate",
+          "value": "'highDataRate'",
+          "tags": [
+            {
+              "text": "0.3.0",
+              "name": "since"
+            }
+          ],
+          "docs": ""
+        },
+        {
+          "name": "option",
+          "value": "'option'",
+          "tags": [
+            {
+              "text": "0.3.0",
+              "name": "since"
+            }
+          ],
+          "docs": ""
+        },
+        {
+          "name": "protocolExtension",
+          "value": "'protocolExtension'",
+          "tags": [
+            {
+              "text": "0.3.0",
+              "name": "since"
+            }
+          ],
+          "docs": ""
+        },
+        {
+          "name": "select",
+          "value": "'select'",
+          "tags": [
+            {
+              "text": "0.3.0",
+              "name": "since"
+            }
+          ],
+          "docs": ""
+        }
+      ]
+    },
+    {
+      "name": "NfcTagType",
+      "slug": "nfctagtype",
+      "members": [
+        {
+          "name": "NfcForumType1",
+          "value": "'NFC_FORUM_TYPE_1'",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "Only available on Android."
+        },
+        {
+          "name": "NfcForumType2",
+          "value": "'NFC_FORUM_TYPE_2'",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "Only available on Android."
+        },
+        {
+          "name": "NfcForumType3",
+          "value": "'NFC_FORUM_TYPE_3'",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "Only available on Android and iOS."
+        },
+        {
+          "name": "NfcForumType4",
+          "value": "'NFC_FORUM_TYPE_4'",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "Only available on Android."
+        },
+        {
+          "name": "MifareClassic",
+          "value": "'MIFARE_CLASSIC'",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "Only available on Android."
+        },
+        {
+          "name": "MifareDesfire",
+          "value": "'MIFARE_DESFIRE'",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            },
+            {
+              "text": "Not supported on any platform.",
+              "name": "deprecated"
+            }
+          ],
+          "docs": ""
+        },
+        {
+          "name": "MifarePlus",
+          "value": "'MIFARE_PLUS'",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "Only available on Android."
+        },
+        {
+          "name": "MifarePro",
+          "value": "'MIFARE_PRO'",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "Only available on Android."
+        },
+        {
+          "name": "MifareUltralight",
+          "value": "'MIFARE_ULTRALIGHT'",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "Only available on Android."
+        },
+        {
+          "name": "MifareUltralightC",
+          "value": "'MIFARE_ULTRALIGHT_C'",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "Only available on Android."
+        }
+      ]
+    }
+  ],
+  "typeAliases": [
+    {
+      "name": "PermissionState",
+      "slug": "permissionstate",
+      "docs": "",
+      "types": [
+        {
+          "text": "\"denied\"",
+          "complexTypes": []
+        },
+        {
+          "text": "\"granted\"",
+          "complexTypes": []
+        },
+        {
+          "text": "\"prompt\"",
+          "complexTypes": []
+        }
+      ]
+    }
+  ],
+  "pluginConfigs": []
+}

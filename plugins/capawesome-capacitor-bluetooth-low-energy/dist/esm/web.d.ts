@@ -1,0 +1,32 @@
+import { WebPlugin } from '@capacitor/core';
+import type { BluetoothLowEnergyPlugin, ConnectOptions, CreateBondOptions, GetConnectedDevicesResult, GetServicesOptions, GetServicesResult, IsBondedOptions, IsBondedResult, IsEnabledResult, PermissionStatus, ReadCharacteristicOptions, ReadCharacteristicResult, ReadDescriptorOptions, ReadDescriptorResult, ReadRssiOptions, ReadRssiResult, RequestConnectionPriorityOptions, RequestMtuOptions, StartCharacteristicNotificationsOptions, StartForegroundServiceOptions, StopCharacteristicNotificationsOptions, WriteCharacteristicOptions } from './definitions';
+export declare class BluetoothLowEnergyWeb extends WebPlugin implements BluetoothLowEnergyPlugin {
+    connect(_options: ConnectOptions): Promise<void>;
+    createBond(_options: CreateBondOptions): Promise<void>;
+    disconnect(): Promise<void>;
+    discoverServices(): Promise<void>;
+    getConnectedDevices(): Promise<GetConnectedDevicesResult>;
+    getServices(_options: GetServicesOptions): Promise<GetServicesResult>;
+    isBonded(_options: IsBondedOptions): Promise<IsBondedResult>;
+    isEnabled(): Promise<IsEnabledResult>;
+    initialize(): Promise<void>;
+    openAppSettings(): Promise<void>;
+    openBluetoothSettings(): Promise<void>;
+    openLocationSettings(): Promise<void>;
+    readCharacteristic(_options: ReadCharacteristicOptions): Promise<ReadCharacteristicResult>;
+    readDescriptor(_options: ReadDescriptorOptions): Promise<ReadDescriptorResult>;
+    readRssi(_options: ReadRssiOptions): Promise<ReadRssiResult>;
+    requestConnectionPriority(_options: RequestConnectionPriorityOptions): Promise<void>;
+    requestMtu(_options: RequestMtuOptions): Promise<void>;
+    startCharacteristicNotifications(_options: StartCharacteristicNotificationsOptions): Promise<void>;
+    startScan(): Promise<void>;
+    startForegroundService(_options: StartForegroundServiceOptions): Promise<void>;
+    stopCharacteristicNotifications(_options: StopCharacteristicNotificationsOptions): Promise<void>;
+    stopForegroundService(): Promise<void>;
+    stopScan(): Promise<void>;
+    writeCharacteristic(_options: WriteCharacteristicOptions): Promise<void>;
+    writeDescriptor(_options: WriteCharacteristicOptions): Promise<void>;
+    checkPermissions(): Promise<PermissionStatus>;
+    requestPermissions(): Promise<PermissionStatus>;
+    private createUnavailableException;
+}

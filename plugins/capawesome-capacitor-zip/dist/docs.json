@@ -1,0 +1,202 @@
+{
+  "api": {
+    "name": "ZipPlugin",
+    "slug": "zipplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "unzip",
+        "signature": "(options: UnzipOptions) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "UnzipOptions"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Unzip a file.\n\nOnly available on Android and iOS.",
+        "complexTypes": [
+          "UnzipOptions"
+        ],
+        "slug": "unzip"
+      },
+      {
+        "name": "zip",
+        "signature": "(options: ZipOptions) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "ZipOptions"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Zip a file or directory.\n\nOnly available on Android and iOS.",
+        "complexTypes": [
+          "ZipOptions"
+        ],
+        "slug": "zip"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "UnzipOptions",
+      "slug": "unzipoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "destination",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"file:///data/user/0/dev.robingenz.capacitor.plugindemo/cache/1714900095398\"",
+              "name": "example"
+            },
+            {
+              "text": "\"file:///var/mobile/Containers/Data/Application/0283533F-3254-40EF-881E-8F68E3AF1207/Library/Caches/1714901909011\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The destination directory.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "tags": [
+            {
+              "text": "6.1.0",
+              "name": "since"
+            },
+            {
+              "text": "\"secret\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The password to decrypt the zip file.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "source",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"file:///data/user/0/dev.robingenz.capacitor.plugindemo/cache/1714900095398.zip\"",
+              "name": "example"
+            },
+            {
+              "text": "\"file:///var/mobile/Containers/Data/Application/0283533F-3254-40EF-881E-8F68E3AF1207/Library/Caches/1714901909011.zip\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The source file to unzip.",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "ZipOptions",
+      "slug": "zipoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "destination",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"file:///data/user/0/dev.robingenz.capacitor.plugindemo/cache/1714900095398.zip\"",
+              "name": "example"
+            },
+            {
+              "text": "\"file:///var/mobile/Containers/Data/Application/0283533F-3254-40EF-881E-8F68E3AF1207/Library/Caches/1714901909011.zip\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The destination file.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "tags": [
+            {
+              "text": "6.1.0",
+              "name": "since"
+            },
+            {
+              "text": "\"secret\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The password to encrypt the zip file.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "source",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"file:///data/user/0/dev.robingenz.capacitor.plugindemo/cache/1714900095398\"",
+              "name": "example"
+            },
+            {
+              "text": "\"file:///var/mobile/Containers/Data/Application/0283533F-3254-40EF-881E-8F68E3AF1207/Library/Caches/1714901909011\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The source file or directory to zip.",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": []
+}

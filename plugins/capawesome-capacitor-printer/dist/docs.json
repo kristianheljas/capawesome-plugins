@@ -1,0 +1,181 @@
+{
+  "api": {
+    "name": "PrinterPlugin",
+    "slug": "printerplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "printHtml",
+        "signature": "(options: PrintHtmlOptions) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "PrintHtmlOptions"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "5.0.0"
+          }
+        ],
+        "docs": "Present the printing user interface to print a html document.\n\nOnly available for Android and iOS.",
+        "complexTypes": [
+          "PrintHtmlOptions"
+        ],
+        "slug": "printhtml"
+      },
+      {
+        "name": "printPdf",
+        "signature": "(options: PrintPdfOptions) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "PrintPdfOptions"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "5.1.0"
+          }
+        ],
+        "docs": "Present the printing user interface to print a pdf document.\n\nOnly available for Android and iOS.",
+        "complexTypes": [
+          "PrintPdfOptions"
+        ],
+        "slug": "printpdf"
+      },
+      {
+        "name": "printWebView",
+        "signature": "(options?: PrintOptions | undefined) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "PrintOptions | undefined"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "5.0.0\n\nOnly available for Android and iOS."
+          }
+        ],
+        "docs": "Present the printing user interface to print the web view content.",
+        "complexTypes": [
+          "PrintWebViewOptions"
+        ],
+        "slug": "printwebview"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "PrintHtmlOptions",
+      "slug": "printhtmloptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "5.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "html",
+          "tags": [
+            {
+              "text": "5.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The HTML content to print.",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "PrintPdfOptions",
+      "slug": "printpdfoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "5.1.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "path",
+          "tags": [
+            {
+              "text": "5.1.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The path to the pdf document on the device.",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "PrintOptions",
+      "slug": "printoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "5.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "name",
+          "tags": [
+            {
+              "text": "5.0.0",
+              "name": "since"
+            },
+            {
+              "text": "'Document'",
+              "name": "default"
+            }
+          ],
+          "docs": "The name of the print job.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        }
+      ]
+    }
+  ],
+  "enums": [],
+  "typeAliases": [
+    {
+      "name": "PrintWebViewOptions",
+      "slug": "printwebviewoptions",
+      "docs": "",
+      "types": [
+        {
+          "text": "PrintOptions",
+          "complexTypes": [
+            "PrintOptions"
+          ]
+        }
+      ]
+    }
+  ],
+  "pluginConfigs": []
+}

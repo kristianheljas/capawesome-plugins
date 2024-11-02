@@ -1,0 +1,1762 @@
+{
+  "api": {
+    "name": "INfcUtils",
+    "slug": "infcutils",
+    "docs": "",
+    "tags": [
+      {
+        "text": "0.0.1",
+        "name": "since"
+      }
+    ],
+    "methods": [
+      {
+        "name": "convertBytesToHex",
+        "signature": "(options: ConvertBytesToHexOptions) => { hex: string; }",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "ConvertBytesToHexOptions"
+          }
+        ],
+        "returns": "{ hex: string; }",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.3.1"
+          }
+        ],
+        "docs": "Convert a byte array to a hex string.",
+        "complexTypes": [
+          "ConvertBytesToHexOptions"
+        ],
+        "slug": "convertbytestohex"
+      },
+      {
+        "name": "convertBytesToString",
+        "signature": "(options: ConvertBytesToStringOptions) => { text: string; }",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "ConvertBytesToStringOptions"
+          }
+        ],
+        "returns": "{ text: string; }",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.0.1"
+          }
+        ],
+        "docs": "Convert a byte array to a string.",
+        "complexTypes": [
+          "ConvertBytesToStringOptions"
+        ],
+        "slug": "convertbytestostring"
+      },
+      {
+        "name": "convertHexToBytes",
+        "signature": "(options: ConvertHexToBytesOptions) => { bytes: number[]; }",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "ConvertHexToBytesOptions"
+          }
+        ],
+        "returns": "{ bytes: number[]; }",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.3.1"
+          }
+        ],
+        "docs": "Convert a hex string to a byte array.",
+        "complexTypes": [
+          "ConvertHexToBytesOptions"
+        ],
+        "slug": "converthextobytes"
+      },
+      {
+        "name": "convertHexToNumber",
+        "signature": "(options: ConvertHexToNumberOptions) => { number: number; }",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "ConvertHexToNumberOptions"
+          }
+        ],
+        "returns": "{ number: number; }",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.3.1"
+          }
+        ],
+        "docs": "Convert a hex string to a number.",
+        "complexTypes": [
+          "ConvertHexToNumberOptions"
+        ],
+        "slug": "converthextonumber"
+      },
+      {
+        "name": "convertNumberToHex",
+        "signature": "(options: ConvertNumberToHexOptions) => { hex: string; }",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "ConvertNumberToHexOptions"
+          }
+        ],
+        "returns": "{ hex: string; }",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.3.1"
+          }
+        ],
+        "docs": "Convert a number to a hex string.",
+        "complexTypes": [
+          "ConvertNumberToHexOptions"
+        ],
+        "slug": "convertnumbertohex"
+      },
+      {
+        "name": "convertStringToBytes",
+        "signature": "(options: ConvertStringToBytesOptions) => { bytes: number[]; }",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "ConvertStringToBytesOptions"
+          }
+        ],
+        "returns": "{ bytes: number[]; }",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.0.1"
+          }
+        ],
+        "docs": "Convert a string to a byte array.",
+        "complexTypes": [
+          "ConvertStringToBytesOptions"
+        ],
+        "slug": "convertstringtobytes"
+      },
+      {
+        "name": "createNdefRecord",
+        "signature": "(options: CreateNdefRecordOptions) => CreateNdefRecordResult",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "CreateNdefRecordOptions"
+          }
+        ],
+        "returns": "CreateNdefRecordResult",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.0.1"
+          }
+        ],
+        "docs": "Create a NDEF record.",
+        "complexTypes": [
+          "CreateNdefRecordResult",
+          "CreateNdefRecordOptions"
+        ],
+        "slug": "createndefrecord"
+      },
+      {
+        "name": "createNdefEmptyRecord",
+        "signature": "() => CreateNdefRecordResult",
+        "parameters": [],
+        "returns": "CreateNdefRecordResult",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.0.1"
+          }
+        ],
+        "docs": "Create an empty NDEF record.",
+        "complexTypes": [
+          "CreateNdefRecordResult"
+        ],
+        "slug": "createndefemptyrecord"
+      },
+      {
+        "name": "createNdefTextRecord",
+        "signature": "(options: CreateNdefTextRecordOptions) => CreateNdefRecordResult",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "CreateNdefTextRecordOptions"
+          }
+        ],
+        "returns": "CreateNdefRecordResult",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.0.1"
+          }
+        ],
+        "docs": "Create a NDEF text record.",
+        "complexTypes": [
+          "CreateNdefRecordResult",
+          "CreateNdefTextRecordOptions"
+        ],
+        "slug": "createndeftextrecord"
+      },
+      {
+        "name": "createNdefUriRecord",
+        "signature": "(options: CreateNdefUriRecordOptions) => CreateNdefRecordResult",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "CreateNdefUriRecordOptions"
+          }
+        ],
+        "returns": "CreateNdefRecordResult",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.0.1"
+          }
+        ],
+        "docs": "Create a NDEF URI record.",
+        "complexTypes": [
+          "CreateNdefRecordResult",
+          "CreateNdefUriRecordOptions"
+        ],
+        "slug": "createndefurirecord"
+      },
+      {
+        "name": "createNdefAbsoluteUriRecord",
+        "signature": "(options: CreateNdefAbsoluteUriRecordOptions) => CreateNdefRecordResult",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "CreateNdefAbsoluteUriRecordOptions"
+          }
+        ],
+        "returns": "CreateNdefRecordResult",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.0.1"
+          }
+        ],
+        "docs": "Create a NDEF absolute URI record.",
+        "complexTypes": [
+          "CreateNdefRecordResult",
+          "CreateNdefAbsoluteUriRecordOptions"
+        ],
+        "slug": "createndefabsoluteurirecord"
+      },
+      {
+        "name": "createNdefMimeMediaRecord",
+        "signature": "(options: CreateNdefMimeMediaRecordOptions) => CreateNdefRecordResult",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "CreateNdefMimeMediaRecordOptions"
+          }
+        ],
+        "returns": "CreateNdefRecordResult",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.0.1"
+          }
+        ],
+        "docs": "Create a NDEF mime media record.",
+        "complexTypes": [
+          "CreateNdefRecordResult",
+          "CreateNdefMimeMediaRecordOptions"
+        ],
+        "slug": "createndefmimemediarecord"
+      },
+      {
+        "name": "createNdefExternalRecord",
+        "signature": "(options: CreateNdefExternalRecordOptions) => CreateNdefRecordResult",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "CreateNdefExternalRecordOptions"
+          }
+        ],
+        "returns": "CreateNdefRecordResult",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.0.1"
+          }
+        ],
+        "docs": "Create a NDEF external type record.",
+        "complexTypes": [
+          "CreateNdefRecordResult",
+          "CreateNdefExternalRecordOptions"
+        ],
+        "slug": "createndefexternalrecord"
+      },
+      {
+        "name": "getIdentifierCodeFromNdefUriRecord",
+        "signature": "(options: GetIdentifierCodeFromNdefUriRecordOptions) => { identifierCode: UriIdentifierCode | undefined; }",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "GetIdentifierCodeFromNdefUriRecordOptions"
+          }
+        ],
+        "returns": "{ identifierCode: UriIdentifierCode | undefined; }",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.3.1"
+          }
+        ],
+        "docs": "Get the identifier code from a NDEF URI record.\n\nThis method assumes that the record has a valid URI identifier code.",
+        "complexTypes": [
+          "UriIdentifierCode",
+          "GetIdentifierCodeFromNdefUriRecordOptions"
+        ],
+        "slug": "getidentifiercodefromndefurirecord"
+      },
+      {
+        "name": "getLanguageFromNdefTextRecord",
+        "signature": "(options: GetLanguageFromNdefTextRecordOptions) => { language: string | undefined; }",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "GetLanguageFromNdefTextRecordOptions"
+          }
+        ],
+        "returns": "{ language: string | undefined; }",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.0.1"
+          }
+        ],
+        "docs": "Get the language code from a NDEF text record.",
+        "complexTypes": [
+          "GetLanguageFromNdefTextRecordOptions"
+        ],
+        "slug": "getlanguagefromndeftextrecord"
+      },
+      {
+        "name": "getTextFromNdefTextRecord",
+        "signature": "(options: GetTextFromNdefTextRecordOptions) => { text: string | undefined; }",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "GetTextFromNdefTextRecordOptions"
+          }
+        ],
+        "returns": "{ text: string | undefined; }",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.0.1"
+          }
+        ],
+        "docs": "Get the text from a NDEF text record.",
+        "complexTypes": [
+          "GetTextFromNdefTextRecordOptions"
+        ],
+        "slug": "gettextfromndeftextrecord"
+      },
+      {
+        "name": "getUriFromNdefUriRecord",
+        "signature": "(options: GetIdentifierCodeFromNdefUriRecordOptions) => { uri: string | undefined; }",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "GetIdentifierCodeFromNdefUriRecordOptions"
+          }
+        ],
+        "returns": "{ uri: string | undefined; }",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.3.1"
+          }
+        ],
+        "docs": "Get the uri from a NDEF URI record.\n\nThis method assumes that the record has a valid URI identifier code.",
+        "complexTypes": [
+          "GetIdentifierCodeFromNdefUriRecordOptions"
+        ],
+        "slug": "geturifromndefurirecord"
+      },
+      {
+        "name": "mapBytesToRecordTypeDefinition",
+        "signature": "(options: { bytes: number[]; }) => { type: RecordTypeDefinition | undefined; }",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ bytes: number[]; }"
+          }
+        ],
+        "returns": "{ type: RecordTypeDefinition | undefined; }",
+        "tags": [
+          {
+            "name": "since",
+            "text": "0.0.1"
+          }
+        ],
+        "docs": "Map a byte array to a the corresponding NDEF record type.",
+        "complexTypes": [
+          "RecordTypeDefinition"
+        ],
+        "slug": "mapbytestorecordtypedefinition"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "ConvertBytesToHexOptions",
+      "slug": "convertbytestohexoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "0.3.1",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "bytes",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The byte array to convert to a hex string.",
+          "complexTypes": [],
+          "type": "number[]"
+        },
+        {
+          "name": "start",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            },
+            {
+              "text": "'0x'",
+              "name": "default"
+            }
+          ],
+          "docs": "The text to prepend to the hex string.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "separator",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            },
+            {
+              "text": "''",
+              "name": "default"
+            },
+            {
+              "text": "':'",
+              "name": "example"
+            }
+          ],
+          "docs": "The separator to use between each byte.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        }
+      ]
+    },
+    {
+      "name": "ConvertBytesToStringOptions",
+      "slug": "convertbytestostringoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "0.0.1",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "bytes",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The byte array to convert to a string.",
+          "complexTypes": [],
+          "type": "number[]"
+        }
+      ]
+    },
+    {
+      "name": "ConvertHexToBytesOptions",
+      "slug": "converthextobytesoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "0.3.1",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "hex",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The hex string to convert to a byte array.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "start",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            },
+            {
+              "text": "'0x'",
+              "name": "default"
+            }
+          ],
+          "docs": "The text to remove from the beginning of the hex string.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "separator",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            },
+            {
+              "text": "''",
+              "name": "default"
+            },
+            {
+              "text": "':'",
+              "name": "example"
+            }
+          ],
+          "docs": "The separator which is used between each byte.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        }
+      ]
+    },
+    {
+      "name": "ConvertHexToNumberOptions",
+      "slug": "converthextonumberoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "0.3.1",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "hex",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The hex string to convert to a number array.",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "ConvertNumberToHexOptions",
+      "slug": "convertnumbertohexoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "0.3.1",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "number",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The number to convert to a hex string.",
+          "complexTypes": [],
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "name": "ConvertStringToBytesOptions",
+      "slug": "convertstringtobytesoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "0.0.1",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "text",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The string to convert to a byte array.",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "CreateNdefRecordResult",
+      "slug": "createndefrecordresult",
+      "docs": "",
+      "tags": [
+        {
+          "text": "0.0.1",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "record",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "",
+          "complexTypes": [
+            "NdefRecord"
+          ],
+          "type": "NdefRecord"
+        }
+      ]
+    },
+    {
+      "name": "NdefRecord",
+      "slug": "ndefrecord",
+      "docs": "",
+      "tags": [
+        {
+          "text": "0.0.1",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "id",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The record identifier as byte array.",
+          "complexTypes": [],
+          "type": "number[] | undefined"
+        },
+        {
+          "name": "payload",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The payload field data as byte array.",
+          "complexTypes": [],
+          "type": "number[] | undefined"
+        },
+        {
+          "name": "tnf",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The record type name format which indicates the structure of\nthe value of the `type` field.",
+          "complexTypes": [
+            "TypeNameFormat"
+          ],
+          "type": "TypeNameFormat"
+        },
+        {
+          "name": "type",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The type of the record payload.\nThis should be used in conjunction with the `tnf` field to determine\nthe payload format.",
+          "complexTypes": [],
+          "type": "number[] | undefined"
+        }
+      ]
+    },
+    {
+      "name": "CreateNdefRecordOptions",
+      "slug": "createndefrecordoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "0.0.1",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "id",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | number[] | undefined"
+        },
+        {
+          "name": "payload",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | number[] | undefined"
+        },
+        {
+          "name": "tnf",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "",
+          "complexTypes": [
+            "TypeNameFormat"
+          ],
+          "type": "TypeNameFormat"
+        },
+        {
+          "name": "type",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "",
+          "complexTypes": [
+            "RecordTypeDefinition"
+          ],
+          "type": "string | number[] | undefined"
+        }
+      ]
+    },
+    {
+      "name": "CreateNdefTextRecordOptions",
+      "slug": "createndeftextrecordoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "0.0.1",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "id",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | number[] | undefined"
+        },
+        {
+          "name": "text",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | number[]"
+        },
+        {
+          "name": "language",
+          "tags": [
+            {
+              "text": "en",
+              "name": "default"
+            },
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The ISO/IANA language identifier.",
+          "complexTypes": [],
+          "type": "string | number[] | undefined"
+        }
+      ]
+    },
+    {
+      "name": "CreateNdefUriRecordOptions",
+      "slug": "createndefurirecordoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "0.0.1",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "id",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | number[] | undefined"
+        },
+        {
+          "name": "uri",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            },
+            {
+              "text": "capacitorjs.com",
+              "name": "example"
+            }
+          ],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | number[]"
+        },
+        {
+          "name": "identifierCode",
+          "tags": [
+            {
+              "text": "UriIdentifierCode.None",
+              "name": "default"
+            },
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The URI identifier code.",
+          "complexTypes": [
+            "UriIdentifierCode"
+          ],
+          "type": "number | undefined"
+        }
+      ]
+    },
+    {
+      "name": "CreateNdefAbsoluteUriRecordOptions",
+      "slug": "createndefabsoluteurirecordoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "0.0.1",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "id",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | number[] | undefined"
+        },
+        {
+          "name": "uri",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | number[]"
+        }
+      ]
+    },
+    {
+      "name": "CreateNdefMimeMediaRecordOptions",
+      "slug": "createndefmimemediarecordoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "0.0.1",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "id",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | number[] | undefined"
+        },
+        {
+          "name": "mimeType",
+          "tags": [
+            {
+              "text": "application/json",
+              "name": "example"
+            },
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "A valid MIME type.",
+          "complexTypes": [],
+          "type": "string | number[]"
+        },
+        {
+          "name": "mimeData",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The MIME data as bytes or string.",
+          "complexTypes": [],
+          "type": "string | number[] | undefined"
+        }
+      ]
+    },
+    {
+      "name": "CreateNdefExternalRecordOptions",
+      "slug": "createndefexternalrecordoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "0.0.1",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "id",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | number[] | undefined"
+        },
+        {
+          "name": "payload",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | number[] | undefined"
+        },
+        {
+          "name": "domain",
+          "tags": [
+            {
+              "text": "com.example",
+              "name": "example"
+            },
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The domain-name of issuing organization.",
+          "complexTypes": [],
+          "type": "string | number[]"
+        },
+        {
+          "name": "type",
+          "tags": [
+            {
+              "text": "externalType",
+              "name": "example"
+            },
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "The domain-specific type of data.",
+          "complexTypes": [],
+          "type": "string | number[]"
+        }
+      ]
+    },
+    {
+      "name": "GetIdentifierCodeFromNdefUriRecordOptions",
+      "slug": "getidentifiercodefromndefurirecordoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "0.3.1",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "record",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "",
+          "complexTypes": [
+            "NdefRecord"
+          ],
+          "type": "NdefRecord"
+        }
+      ]
+    },
+    {
+      "name": "GetLanguageFromNdefTextRecordOptions",
+      "slug": "getlanguagefromndeftextrecordoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "0.0.1",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "record",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "",
+          "complexTypes": [
+            "NdefRecord"
+          ],
+          "type": "NdefRecord"
+        }
+      ]
+    },
+    {
+      "name": "GetTextFromNdefTextRecordOptions",
+      "slug": "gettextfromndeftextrecordoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "0.0.1",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "record",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "",
+          "complexTypes": [
+            "NdefRecord"
+          ],
+          "type": "NdefRecord"
+        }
+      ]
+    }
+  ],
+  "enums": [
+    {
+      "name": "TypeNameFormat",
+      "slug": "typenameformat",
+      "members": [
+        {
+          "name": "Empty",
+          "value": "0",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "An empty record with no type or payload."
+        },
+        {
+          "name": "WellKnown",
+          "value": "1",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "A predefined type defined in the RTD specification of the NFC Forum."
+        },
+        {
+          "name": "MimeMedia",
+          "value": "2",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "An Internet media type as defined in RFC 2046."
+        },
+        {
+          "name": "AbsoluteUri",
+          "value": "3",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "A URI as defined in RFC 3986."
+        },
+        {
+          "name": "External",
+          "value": "4",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "A user-defined value that is based on the rules of the\nNFC Forum Record Type Definition specification."
+        },
+        {
+          "name": "Unknown",
+          "value": "5",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "Type is unknown."
+        },
+        {
+          "name": "Unchanged",
+          "value": "6",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": "Indicates the payload is an intermediate or final chunk\nof a chunked NDEF Record."
+        }
+      ]
+    },
+    {
+      "name": "RecordTypeDefinition",
+      "slug": "recordtypedefinition",
+      "members": [
+        {
+          "name": "AndroidApp",
+          "value": "'android.com:pkg'",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": ""
+        },
+        {
+          "name": "AlternativeCarrier",
+          "value": "'ac'",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": ""
+        },
+        {
+          "name": "HandoverCarrier",
+          "value": "'Hc'",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": ""
+        },
+        {
+          "name": "HandoverRequest",
+          "value": "'Hr'",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": ""
+        },
+        {
+          "name": "HandoverSelect",
+          "value": "'Hs'",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": ""
+        },
+        {
+          "name": "SmartPoster",
+          "value": "'Sp'",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": ""
+        },
+        {
+          "name": "Text",
+          "value": "'T'",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": ""
+        },
+        {
+          "name": "Uri",
+          "value": "'U'",
+          "tags": [
+            {
+              "text": "0.0.1",
+              "name": "since"
+            }
+          ],
+          "docs": ""
+        }
+      ]
+    },
+    {
+      "name": "UriIdentifierCode",
+      "slug": "uriidentifiercode",
+      "members": [
+        {
+          "name": "None",
+          "value": "0",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "No prepending is done."
+        },
+        {
+          "name": "HttpWww",
+          "value": "1",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`http://www.` is prepended to the URI."
+        },
+        {
+          "name": "HttpsWww",
+          "value": "2",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`https://www.` is prepended to the URI."
+        },
+        {
+          "name": "Http",
+          "value": "3",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`http:` is prepended to the URI."
+        },
+        {
+          "name": "Https",
+          "value": "4",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`https:` is prepended to the URI."
+        },
+        {
+          "name": "Tel",
+          "value": "5",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`tel:` is prepended to the URI."
+        },
+        {
+          "name": "Mailto",
+          "value": "6",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`mailto:` is prepended to the URI."
+        },
+        {
+          "name": "FtpAnonymous",
+          "value": "7",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`ftp://anonymous:anonymous@` is prepended to the URI."
+        },
+        {
+          "name": "FtpFtp",
+          "value": "8",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`ftp://ftp.` is prepended to the URI."
+        },
+        {
+          "name": "Ftps",
+          "value": "9",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`ftps://` is prepended to the URI."
+        },
+        {
+          "name": "Sftp",
+          "value": "10",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`sftp://` is prepended to the URI."
+        },
+        {
+          "name": "Smb",
+          "value": "11",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`smb://` is prepended to the URI."
+        },
+        {
+          "name": "Nfs",
+          "value": "12",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`nfs://` is prepended to the URI."
+        },
+        {
+          "name": "Ftp",
+          "value": "13",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`ftp://` is prepended to the URI."
+        },
+        {
+          "name": "Dav",
+          "value": "14",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`dav://` is prepended to the URI."
+        },
+        {
+          "name": "News",
+          "value": "15",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`news:` is prepended to the URI."
+        },
+        {
+          "name": "Telnet",
+          "value": "16",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`telnet://` is prepended to the URI."
+        },
+        {
+          "name": "Imap",
+          "value": "17",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`imap:` is prepended to the URI."
+        },
+        {
+          "name": "Rtsp",
+          "value": "18",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`rtsp://` is prepended to the URI."
+        },
+        {
+          "name": "Urn",
+          "value": "19",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`urn:` is prepended to the URI."
+        },
+        {
+          "name": "Pop",
+          "value": "20",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`pop:` is prepended to the URI."
+        },
+        {
+          "name": "Sip",
+          "value": "21",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`sip:` is prepended to the URI."
+        },
+        {
+          "name": "Sips",
+          "value": "22",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`sips:` is prepended to the URI."
+        },
+        {
+          "name": "Tftp",
+          "value": "23",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`tftp:` is prepended to the URI."
+        },
+        {
+          "name": "Btspp",
+          "value": "24",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`btspp://` is prepended to the URI."
+        },
+        {
+          "name": "Btl2cap",
+          "value": "25",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`btl2cap://` is prepended to the URI."
+        },
+        {
+          "name": "Btgoep",
+          "value": "26",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`btgoep://` is prepended to the URI."
+        },
+        {
+          "name": "Tcpobex",
+          "value": "27",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`tcpobex://` is prepended to the URI."
+        },
+        {
+          "name": "Irdaobex",
+          "value": "28",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`irdaobex://` is prepended to the URI."
+        },
+        {
+          "name": "File",
+          "value": "29",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`file://` is prepended to the URI."
+        },
+        {
+          "name": "UrnEpcId",
+          "value": "30",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`urn:epc:id:` is prepended to the URI."
+        },
+        {
+          "name": "UrnEpcTag",
+          "value": "31",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`urn:epc:tag:` is prepended to the URI."
+        },
+        {
+          "name": "UrnEpcPat",
+          "value": "32",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`urn:epc:pat:` is prepended to the URI."
+        },
+        {
+          "name": "UrnEpcRaw",
+          "value": "33",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`urn:epc:raw:` is prepended to the URI."
+        },
+        {
+          "name": "UrnEpc",
+          "value": "34",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`urn:epc:` is prepended to the URI."
+        },
+        {
+          "name": "UrnNfc",
+          "value": "35",
+          "tags": [
+            {
+              "text": "0.3.1",
+              "name": "since"
+            }
+          ],
+          "docs": "`urn:nfc:` is prepended to the URI."
+        }
+      ]
+    }
+  ],
+  "typeAliases": [],
+  "pluginConfigs": []
+}

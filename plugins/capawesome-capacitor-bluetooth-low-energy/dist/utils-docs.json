@@ -1,0 +1,191 @@
+{
+  "api": {
+    "name": "IBluetoothLowEnergyUtils",
+    "slug": "ibluetoothlowenergyutils",
+    "docs": "",
+    "tags": [
+      {
+        "text": "6.0.0",
+        "name": "since"
+      }
+    ],
+    "methods": [
+      {
+        "name": "convertBytesToHex",
+        "signature": "(options: ConvertBytesToHexOptions) => { hex: string; }",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "ConvertBytesToHexOptions"
+          }
+        ],
+        "returns": "{ hex: string; }",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Convert a byte array to a hex string.",
+        "complexTypes": [
+          "ConvertBytesToHexOptions"
+        ],
+        "slug": "convertbytestohex"
+      },
+      {
+        "name": "convertHexToBytes",
+        "signature": "(options: ConvertHexToBytesOptions) => { bytes: number[]; }",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "ConvertHexToBytesOptions"
+          }
+        ],
+        "returns": "{ bytes: number[]; }",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Convert a hex string to a byte array.",
+        "complexTypes": [
+          "ConvertHexToBytesOptions"
+        ],
+        "slug": "converthextobytes"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "ConvertBytesToHexOptions",
+      "slug": "convertbytestohexoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "bytes",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The byte array to convert to a hex string.",
+          "complexTypes": [],
+          "type": "number[]"
+        },
+        {
+          "name": "start",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "'0x'",
+              "name": "default"
+            }
+          ],
+          "docs": "The text to prepend to the hex string.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "separator",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "''",
+              "name": "default"
+            },
+            {
+              "text": "':'",
+              "name": "example"
+            }
+          ],
+          "docs": "The separator to use between each byte.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        }
+      ]
+    },
+    {
+      "name": "ConvertHexToBytesOptions",
+      "slug": "converthextobytesoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "hex",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The hex string to convert to a byte array.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "start",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "'0x'",
+              "name": "default"
+            }
+          ],
+          "docs": "The text to remove from the beginning of the hex string.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "separator",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "''",
+              "name": "default"
+            },
+            {
+              "text": "':'",
+              "name": "example"
+            }
+          ],
+          "docs": "The separator which is used between each byte.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        }
+      ]
+    }
+  ],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": []
+}

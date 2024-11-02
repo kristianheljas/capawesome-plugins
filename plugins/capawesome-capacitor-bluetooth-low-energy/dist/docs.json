@@ -1,0 +1,2762 @@
+{
+  "api": {
+    "name": "BluetoothLowEnergyPlugin",
+    "slug": "bluetoothlowenergyplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "connect",
+        "signature": "(options: ConnectOptions) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "ConnectOptions"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Connect to a BLE device.\n\nOnly available on Android and iOS.",
+        "complexTypes": [
+          "ConnectOptions"
+        ],
+        "slug": "connect"
+      },
+      {
+        "name": "createBond",
+        "signature": "(options: CreateBondOptions) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "CreateBondOptions"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Create a bond with the BLE device.\n\nOnly available on Android.",
+        "complexTypes": [
+          "CreateBondOptions"
+        ],
+        "slug": "createbond"
+      },
+      {
+        "name": "disconnect",
+        "signature": "(options: DisconnectOptions) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "DisconnectOptions"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Disconnect from the BLE device.\n\nOnly available on Android and iOS.",
+        "complexTypes": [
+          "DisconnectOptions"
+        ],
+        "slug": "disconnect"
+      },
+      {
+        "name": "discoverServices",
+        "signature": "(options: DiscoverServiceOptions) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "DiscoverServiceOptions"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Discover services provided by the device.\n\nOn **iOS**, this operation may take up to 30 seconds.\n\nOnly available on Android and iOS.",
+        "complexTypes": [
+          "DiscoverServiceOptions"
+        ],
+        "slug": "discoverservices"
+      },
+      {
+        "name": "getConnectedDevices",
+        "signature": "() => Promise<GetConnectedDevicesResult>",
+        "parameters": [],
+        "returns": "Promise<GetConnectedDevicesResult>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Get a list of connected devices.\n\nOnly available on Android and iOS.",
+        "complexTypes": [
+          "GetConnectedDevicesResult"
+        ],
+        "slug": "getconnecteddevices"
+      },
+      {
+        "name": "getServices",
+        "signature": "(options: GetServicesOptions) => Promise<GetServicesResult>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "GetServicesOptions"
+          }
+        ],
+        "returns": "Promise<GetServicesResult>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Get a list of services provided by the device.\n\nOnly available on Android and iOS.",
+        "complexTypes": [
+          "GetServicesResult",
+          "GetServicesOptions"
+        ],
+        "slug": "getservices"
+      },
+      {
+        "name": "initialize",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Initialize the plugin. This method must be called before any other method.\n\nOn **iOS**, this will prompt the user for Bluetooth permissions.\n\nOnly available on iOS.",
+        "complexTypes": [],
+        "slug": "initialize"
+      },
+      {
+        "name": "isBonded",
+        "signature": "(options: IsBondedOptions) => Promise<IsBondedResult>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "IsBondedOptions"
+          }
+        ],
+        "returns": "Promise<IsBondedResult>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Check if the device is bonded.\n\nOnly available on Android.",
+        "complexTypes": [
+          "IsBondedResult",
+          "IsBondedOptions"
+        ],
+        "slug": "isbonded"
+      },
+      {
+        "name": "isEnabled",
+        "signature": "() => Promise<IsEnabledResult>",
+        "parameters": [],
+        "returns": "Promise<IsEnabledResult>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Check if Bluetooth is enabled.\n\nOnly available on Android and iOS.",
+        "complexTypes": [
+          "IsEnabledResult"
+        ],
+        "slug": "isenabled"
+      },
+      {
+        "name": "openAppSettings",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Open the Bluetooth settings on the device.\n\nOnly available on Android and iOS.",
+        "complexTypes": [],
+        "slug": "openappsettings"
+      },
+      {
+        "name": "openBluetoothSettings",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Open the Bluetooth settings on the device.\n\nOnly available on Android.",
+        "complexTypes": [],
+        "slug": "openbluetoothsettings"
+      },
+      {
+        "name": "openLocationSettings",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Open the location settings on the device.\n\nOnly available on Android.",
+        "complexTypes": [],
+        "slug": "openlocationsettings"
+      },
+      {
+        "name": "readCharacteristic",
+        "signature": "(options: ReadCharacteristicOptions) => Promise<ReadCharacteristicResult>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "ReadCharacteristicOptions"
+          }
+        ],
+        "returns": "Promise<ReadCharacteristicResult>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Read the value of a characteristic.\n\nOnly available on Android and iOS.",
+        "complexTypes": [
+          "ReadCharacteristicResult",
+          "ReadCharacteristicOptions"
+        ],
+        "slug": "readcharacteristic"
+      },
+      {
+        "name": "readDescriptor",
+        "signature": "(options: ReadDescriptorOptions) => Promise<ReadDescriptorResult>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "ReadDescriptorOptions"
+          }
+        ],
+        "returns": "Promise<ReadDescriptorResult>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Read the value of a descriptor.\n\nOnly available on Android and iOS.",
+        "complexTypes": [
+          "ReadDescriptorResult",
+          "ReadDescriptorOptions"
+        ],
+        "slug": "readdescriptor"
+      },
+      {
+        "name": "readRssi",
+        "signature": "(options: ReadRssiOptions) => Promise<ReadRssiResult>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "ReadRssiOptions"
+          }
+        ],
+        "returns": "Promise<ReadRssiResult>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Read the RSSI value of the device.\n\nOnly available on Android and iOS.",
+        "complexTypes": [
+          "ReadRssiResult",
+          "ReadRssiOptions"
+        ],
+        "slug": "readrssi"
+      },
+      {
+        "name": "requestConnectionPriority",
+        "signature": "(options: RequestConnectionPriorityOptions) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "RequestConnectionPriorityOptions"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Request a connection priority.\n\nOnly available on Android.",
+        "complexTypes": [
+          "RequestConnectionPriorityOptions"
+        ],
+        "slug": "requestconnectionpriority"
+      },
+      {
+        "name": "requestMtu",
+        "signature": "(options: RequestMtuOptions) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "RequestMtuOptions"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Request an MTU size.\n\nOnly available on Android.",
+        "complexTypes": [
+          "RequestMtuOptions"
+        ],
+        "slug": "requestmtu"
+      },
+      {
+        "name": "startCharacteristicNotifications",
+        "signature": "(options: StartCharacteristicNotificationsOptions) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "StartCharacteristicNotificationsOptions"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Start listening for characteristic value changes. This will emit the `characteristicChanged` event when a value changes.\n\nOnly available on Android and iOS.",
+        "complexTypes": [
+          "StartCharacteristicNotificationsOptions"
+        ],
+        "slug": "startcharacteristicnotifications"
+      },
+      {
+        "name": "startForegroundService",
+        "signature": "(options: StartForegroundServiceOptions) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "StartForegroundServiceOptions"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Start the foreground service.\n\nOnly available on Android.",
+        "complexTypes": [
+          "StartForegroundServiceOptions"
+        ],
+        "slug": "startforegroundservice"
+      },
+      {
+        "name": "startScan",
+        "signature": "(options?: StartScanOptions | undefined) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "StartScanOptions | undefined"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Start scanning for BLE devices. This will emit the `deviceScanned` event when a device is found.\n\nOnly available on Android and iOS.",
+        "complexTypes": [
+          "StartScanOptions"
+        ],
+        "slug": "startscan"
+      },
+      {
+        "name": "stopCharacteristicNotifications",
+        "signature": "(options: StopCharacteristicNotificationsOptions) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "StopCharacteristicNotificationsOptions"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Stop listening for characteristic value changes.\n\nOnly available on Android and iOS.",
+        "complexTypes": [
+          "StopCharacteristicNotificationsOptions"
+        ],
+        "slug": "stopcharacteristicnotifications"
+      },
+      {
+        "name": "stopForegroundService",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Stop the foreground service.\n\nOnly available on Android.",
+        "complexTypes": [],
+        "slug": "stopforegroundservice"
+      },
+      {
+        "name": "stopScan",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Stop scanning for BLE devices.\n\nOnly available on Android and iOS.",
+        "complexTypes": [],
+        "slug": "stopscan"
+      },
+      {
+        "name": "writeCharacteristic",
+        "signature": "(options: WriteCharacteristicOptions) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "WriteCharacteristicOptions"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Write a value to a characteristic.\n\nOnly available on Android and iOS.",
+        "complexTypes": [
+          "WriteCharacteristicOptions"
+        ],
+        "slug": "writecharacteristic"
+      },
+      {
+        "name": "writeDescriptor",
+        "signature": "(options: WriteDescriptorOptions) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "WriteDescriptorOptions"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Write a value to a descriptor.\n\nOnly available on Android and iOS.",
+        "complexTypes": [
+          "WriteDescriptorOptions"
+        ],
+        "slug": "writedescriptor"
+      },
+      {
+        "name": "checkPermissions",
+        "signature": "() => Promise<PermissionStatus>",
+        "parameters": [],
+        "returns": "Promise<PermissionStatus>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Check permissions for the plugin.\n\nOnly available on Android.",
+        "complexTypes": [
+          "PermissionStatus"
+        ],
+        "slug": "checkpermissions"
+      },
+      {
+        "name": "requestPermissions",
+        "signature": "(permissions?: BluetoothLowEnergyPluginPermission | undefined) => Promise<PermissionStatus>",
+        "parameters": [
+          {
+            "name": "permissions",
+            "docs": "",
+            "type": "BluetoothLowEnergyPluginPermission | undefined"
+          }
+        ],
+        "returns": "Promise<PermissionStatus>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Request permissions for the plugin.\n\nOnly available on Android.",
+        "complexTypes": [
+          "PermissionStatus",
+          "BluetoothLowEnergyPluginPermission"
+        ],
+        "slug": "requestpermissions"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: 'characteristicChanged', listenerFunc: (event: CharacteristicChangedEvent) => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "'characteristicChanged'"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "(event: CharacteristicChangedEvent) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Called when a characteristic value changes.\n\nOnly available on Android and iOS.",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "CharacteristicChangedEvent"
+        ],
+        "slug": "addlistenercharacteristicchanged"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: 'deviceDisconnected', listenerFunc: (event: DeviceDisconnectedEvent) => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "'deviceDisconnected'"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "(event: DeviceDisconnectedEvent) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Called when a device is disconnected.\n\nOnly available on Android and iOS.",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "DeviceDisconnectedEvent"
+        ],
+        "slug": "addlistenerdevicedisconnected"
+      },
+      {
+        "name": "addListener",
+        "signature": "(eventName: 'deviceScanned', listenerFunc: (event: DeviceScannedEvent) => void) => Promise<PluginListenerHandle>",
+        "parameters": [
+          {
+            "name": "eventName",
+            "docs": "",
+            "type": "'deviceScanned'"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "(event: DeviceScannedEvent) => void"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Called when an error occurs during the scan session.\n\nOnly available on Android and iOS.",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "DeviceScannedEvent"
+        ],
+        "slug": "addlistenerdevicescanned"
+      },
+      {
+        "name": "removeAllListeners",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "since",
+            "text": "6.0.0"
+          }
+        ],
+        "docs": "Remove all listeners for this plugin.",
+        "complexTypes": [],
+        "slug": "removealllisteners"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "ConnectOptions",
+      "slug": "connectoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "deviceId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"00:00:00:00:00:00\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The address of the device to connect to.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "timeout",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "10000",
+              "name": "example"
+            },
+            {
+              "text": "10000",
+              "name": "default"
+            }
+          ],
+          "docs": "The timeout for the connect operation in milliseconds.\n\nIf the operation takes longer than this value, the promise will be rejected.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        }
+      ]
+    },
+    {
+      "name": "CreateBondOptions",
+      "slug": "createbondoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "deviceId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"00:00:00:00:00:00\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The address of the device to create a bond with.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "timeout",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "10000",
+              "name": "example"
+            },
+            {
+              "text": "10000",
+              "name": "default"
+            }
+          ],
+          "docs": "The timeout for the create bond operation in milliseconds.\n\nIf the operation takes longer than this value, the promise will be rejected.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        }
+      ]
+    },
+    {
+      "name": "DisconnectOptions",
+      "slug": "disconnectoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "deviceId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"00:00:00:00:00:00\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The address of the device to disconnect from.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "timeout",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "5000",
+              "name": "example"
+            },
+            {
+              "text": "5000",
+              "name": "default"
+            }
+          ],
+          "docs": "The timeout for the disconnect operation in milliseconds.\n\nIf the operation takes longer than this value, the promise will be rejected.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        }
+      ]
+    },
+    {
+      "name": "DiscoverServiceOptions",
+      "slug": "discoverserviceoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "deviceId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"00:00:00:00:00:00\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The address of the device to discover services for.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "timeout",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "20000",
+              "name": "example"
+            },
+            {
+              "text": "20000",
+              "name": "default"
+            }
+          ],
+          "docs": "The timeout for the discover services operation in milliseconds.\n\nIf the operation takes longer than this value, the promise will be rejected.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        }
+      ]
+    },
+    {
+      "name": "GetConnectedDevicesResult",
+      "slug": "getconnecteddevicesresult",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "devices",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "An array of connected devices.",
+          "complexTypes": [
+            "Device"
+          ],
+          "type": "Device[]"
+        }
+      ]
+    },
+    {
+      "name": "Device",
+      "slug": "device",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "id",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"00:00:00:00:00:00\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The UUID of the connected device.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "name",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"My Device\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The name of the connected device.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        }
+      ]
+    },
+    {
+      "name": "GetServicesResult",
+      "slug": "getservicesresult",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "services",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "An array of services provided by the device.",
+          "complexTypes": [
+            "Service"
+          ],
+          "type": "Service[]"
+        }
+      ]
+    },
+    {
+      "name": "Service",
+      "slug": "service",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "id",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"0000180A-0000-1000-8000-00805F9B34FB\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The UUID of the service.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "characteristics",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The characteristics of the service.",
+          "complexTypes": [
+            "Characteristic"
+          ],
+          "type": "Characteristic[]"
+        }
+      ]
+    },
+    {
+      "name": "Characteristic",
+      "slug": "characteristic",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "id",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"00002A29-0000-1000-8000-00805F9B34FB\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The UUID of the characteristic.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "descriptors",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The descriptors of the characteristic.",
+          "complexTypes": [
+            "Descriptor"
+          ],
+          "type": "Descriptor[]"
+        },
+        {
+          "name": "properties",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The properties of the characteristic.",
+          "complexTypes": [
+            "CharacteristicProperties"
+          ],
+          "type": "CharacteristicProperties"
+        }
+      ]
+    },
+    {
+      "name": "Descriptor",
+      "slug": "descriptor",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "id",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"00002A29-0000-1000-8000-00805F9B34FB\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The UUID of the descriptor.",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "CharacteristicProperties",
+      "slug": "characteristicproperties",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "broadcast",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "Whether or not the characteristic can be broadcast.",
+          "complexTypes": [],
+          "type": "boolean"
+        },
+        {
+          "name": "read",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "Whether or not the characteristic can be read.",
+          "complexTypes": [],
+          "type": "boolean"
+        },
+        {
+          "name": "writeWithoutResponse",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "Whether or not the characteristic can be written without response.",
+          "complexTypes": [],
+          "type": "boolean"
+        },
+        {
+          "name": "write",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "Whether or not the characteristic can be written.",
+          "complexTypes": [],
+          "type": "boolean"
+        },
+        {
+          "name": "notify",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "Whether or not the characteristic supports notifications.",
+          "complexTypes": [],
+          "type": "boolean"
+        },
+        {
+          "name": "indicate",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "Whether or not the characteristic supports indications.",
+          "complexTypes": [],
+          "type": "boolean"
+        },
+        {
+          "name": "authenticatedSignedWrites",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "Whether or not the characteristic supports signed writes.",
+          "complexTypes": [],
+          "type": "boolean"
+        },
+        {
+          "name": "extendedProperties",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "Whether or not the characteristic supports extended properties.",
+          "complexTypes": [],
+          "type": "boolean"
+        },
+        {
+          "name": "notifyEncryptionRequired",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "Whether or not the characteristic supports reliable writes.",
+          "complexTypes": [],
+          "type": "boolean"
+        },
+        {
+          "name": "indicateEncryptionRequired",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "Whether or not the characteristic supports writable auxiliaries.",
+          "complexTypes": [],
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "name": "GetServicesOptions",
+      "slug": "getservicesoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "deviceId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"00:00:00:00:00:00\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The address of the device to get the services for.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "timeout",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "5000",
+              "name": "example"
+            },
+            {
+              "text": "5000",
+              "name": "default"
+            }
+          ],
+          "docs": "The timeout for the get services operation in milliseconds.\n\nIf the operation takes longer than this value, the promise will be rejected.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        }
+      ]
+    },
+    {
+      "name": "IsBondedResult",
+      "slug": "isbondedresult",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "bonded",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "true",
+              "name": "example"
+            }
+          ],
+          "docs": "Whether or not the device is bonded.",
+          "complexTypes": [],
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "name": "IsBondedOptions",
+      "slug": "isbondedoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "deviceId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"00:00:00:00:00:00\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The address of the device to check if it is bonded.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "timeout",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "5000",
+              "name": "example"
+            }
+          ],
+          "docs": "The timeout for the is bonded operation in milliseconds.\n\nIf the operation takes longer than this value, the promise will be rejected.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        }
+      ]
+    },
+    {
+      "name": "IsEnabledResult",
+      "slug": "isenabledresult",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "enabled",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "true",
+              "name": "example"
+            }
+          ],
+          "docs": "Whether or not Bluetooth is enabled.",
+          "complexTypes": [],
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "name": "ReadCharacteristicResult",
+      "slug": "readcharacteristicresult",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "value",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "[0, 1, 2, 3]",
+              "name": "example"
+            }
+          ],
+          "docs": "The value bytes of the characteristic.",
+          "complexTypes": [],
+          "type": "number[]"
+        }
+      ]
+    },
+    {
+      "name": "ReadCharacteristicOptions",
+      "slug": "readcharacteristicoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "characteristicId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"00002A29-0000-1000-8000-00805F9B34FB\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The UUID of the characteristic to read.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "deviceId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"00:00:00:00:00:00\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The address of the device to read the characteristic from.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "serviceId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"0000180A-0000-1000-8000-00805F9B34FB\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The UUID of the service to read the characteristic from.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "timeout",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "5000",
+              "name": "example"
+            },
+            {
+              "text": "5000",
+              "name": "default"
+            }
+          ],
+          "docs": "The timeout for the read operation in milliseconds.\n\nIf the operation takes longer than this value, the promise will be rejected.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        }
+      ]
+    },
+    {
+      "name": "ReadDescriptorResult",
+      "slug": "readdescriptorresult",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "value",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "[0, 1, 2, 3]",
+              "name": "example"
+            }
+          ],
+          "docs": "The value bytes of the descriptor.",
+          "complexTypes": [],
+          "type": "number[]"
+        }
+      ]
+    },
+    {
+      "name": "ReadDescriptorOptions",
+      "slug": "readdescriptoroptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "characteristicId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"00002A29-0000-1000-8000-00805F9B34FB\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The UUID of the characteristic that the descriptor belongs to.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "descriptorId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"00002A29-0000-1000-8000-00805F9B34FB\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The UUID of the descriptor to read.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "deviceId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"00:00:00:00:00:00\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The address of the device to read the descriptor from.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "serviceId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"0000180A-0000-1000-8000-00805F9B34FB\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The UUID of the service that the descriptor belongs to.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "timeout",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "5000",
+              "name": "example"
+            },
+            {
+              "text": "5000",
+              "name": "default"
+            }
+          ],
+          "docs": "The timeout for the read operation in milliseconds.\n\nIf the operation takes longer than this value, the promise will be rejected.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        }
+      ]
+    },
+    {
+      "name": "ReadRssiResult",
+      "slug": "readrssiresult",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "rssi",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "-50",
+              "name": "example"
+            }
+          ],
+          "docs": "The RSSI value.",
+          "complexTypes": [],
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "name": "ReadRssiOptions",
+      "slug": "readrssioptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "deviceId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"00:00:00:00:00:00\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The address of the device to read the RSSI for.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "timeout",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "5000",
+              "name": "example"
+            },
+            {
+              "text": "5000",
+              "name": "default"
+            }
+          ],
+          "docs": "The timeout for the read RSSI operation in milliseconds.\n\nIf the operation takes longer than this value, the promise will be rejected.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        }
+      ]
+    },
+    {
+      "name": "RequestConnectionPriorityOptions",
+      "slug": "requestconnectionpriorityoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "deviceId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"00:00:00:00:00:00\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The address of the device to request the connection priority for.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "connectionPriority",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The connection priority to request.",
+          "complexTypes": [
+            "ConnectionPriority"
+          ],
+          "type": "ConnectionPriority"
+        },
+        {
+          "name": "timeout",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "5000",
+              "name": "example"
+            }
+          ],
+          "docs": "The timeout for the request connection priority operation in milliseconds.\n\nIf the operation takes longer than this value, the promise will be rejected.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        }
+      ]
+    },
+    {
+      "name": "RequestMtuOptions",
+      "slug": "requestmtuoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "deviceId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"00:00:00:00:00:00\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The address of the device to request the MTU size for.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "mtu",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "The mtu size to request.",
+          "complexTypes": [],
+          "type": "number"
+        },
+        {
+          "name": "timeout",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "5000",
+              "name": "example"
+            }
+          ],
+          "docs": "The timeout for the request MTU operation in milliseconds.\n\nIf the operation takes longer than this value, the promise will be rejected.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        }
+      ]
+    },
+    {
+      "name": "StartCharacteristicNotificationsOptions",
+      "slug": "startcharacteristicnotificationsoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "characteristicId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"00002A29-0000-1000-8000-00805F9B34FB\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The UUID of the characteristic to start notifications for.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "deviceId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"00:00:00:00:00:00\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The address of the device to start notifications for.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "serviceId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"0000180A-0000-1000-8000-00805F9B34FB\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The UUID of the service to start notifications for.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "timeout",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "5000",
+              "name": "example"
+            },
+            {
+              "text": "5000",
+              "name": "default"
+            }
+          ],
+          "docs": "The timeout for the start notifications operation in milliseconds.\n\nIf the operation takes longer than this value, the promise will be rejected.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        }
+      ]
+    },
+    {
+      "name": "StartForegroundServiceOptions",
+      "slug": "startforegroundserviceoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "body",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"This is the body of the notification\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The body of the notification, shown below the title.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "id",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "123",
+              "name": "example"
+            }
+          ],
+          "docs": "The notification identifier.",
+          "complexTypes": [],
+          "type": "number"
+        },
+        {
+          "name": "smallIcon",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"ic_stat_icon_config_sample\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The status bar icon for the notification.\n\nIcons should be placed in your app's `res/drawable` folder. The value for\nthis option should be the drawable resource ID, which is the filename\nwithout an extension.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "title",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"This is the title of the notification\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The title of the notification.",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "StartScanOptions",
+      "slug": "startscanoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "serviceIds",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "[\"0000180A-0000-1000-8000-00805F9B34FB\"]",
+              "name": "example"
+            }
+          ],
+          "docs": "Find devices with services that match any of the provided UUIDs.\n\nOnly available on iOS.",
+          "complexTypes": [],
+          "type": "string[] | undefined"
+        }
+      ]
+    },
+    {
+      "name": "StopCharacteristicNotificationsOptions",
+      "slug": "stopcharacteristicnotificationsoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "characteristicId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"00002A29-0000-1000-8000-00805F9B34FB\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The UUID of the characteristic to stop notifications for.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "deviceId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"00:00:00:00:00:00\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The address of the device to stop notifications for.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "serviceId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"0000180A-0000-1000-8000-00805F9B34FB\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The UUID of the service to stop notifications for.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "timeout",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "5000",
+              "name": "example"
+            },
+            {
+              "text": "5000",
+              "name": "default"
+            }
+          ],
+          "docs": "The timeout for the stop notifications operation in milliseconds.\n\nIf the operation takes longer than this value, the promise will be rejected.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        }
+      ]
+    },
+    {
+      "name": "WriteCharacteristicOptions",
+      "slug": "writecharacteristicoptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "characteristicId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"00002A29-0000-1000-8000-00805F9B34FB\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The UUID of the characteristic to write.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "deviceId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"00:00:00:00:00:00\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The address of the device to write the characteristic to.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "serviceId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"0000180A-0000-1000-8000-00805F9B34FB\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The UUID of the service to write the characteristic to.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "timeout",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "5000",
+              "name": "example"
+            },
+            {
+              "text": "5000",
+              "name": "default"
+            }
+          ],
+          "docs": "The timeout for the write operation in milliseconds.\n\nIf the operation takes longer than this value, the promise will be rejected.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        },
+        {
+          "name": "type",
+          "tags": [
+            {
+              "text": "6.1.0",
+              "name": "since"
+            },
+            {
+              "text": "'default'",
+              "name": "default"
+            },
+            {
+              "text": "'withoutResponse'",
+              "name": "example"
+            }
+          ],
+          "docs": "The type of write operation.",
+          "complexTypes": [],
+          "type": "'default' | 'withoutResponse' | undefined"
+        },
+        {
+          "name": "value",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "[0, 1, 2, 3]",
+              "name": "example"
+            }
+          ],
+          "docs": "The value bytes to write to the characteristic.",
+          "complexTypes": [],
+          "type": "number[]"
+        }
+      ]
+    },
+    {
+      "name": "WriteDescriptorOptions",
+      "slug": "writedescriptoroptions",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "characteristicId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"00002A29-0000-1000-8000-00805F9B34FB\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The UUID of the characteristic that the descriptor belongs to.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "descriptorId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"00002A29-0000-1000-8000-00805F9B34FB\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The UUID of the descriptor.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "deviceId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"00:00:00:00:00:00\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The address of the device that the descriptor belongs to.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "serviceId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"0000180A-0000-1000-8000-00805F9B34FB\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The UUID of the service that the descriptor belongs to.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "timeout",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "5000",
+              "name": "example"
+            },
+            {
+              "text": "5000",
+              "name": "default"
+            }
+          ],
+          "docs": "The timeout for the write operation in milliseconds.\n\nIf the operation takes longer than this value, the promise will be rejected.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        },
+        {
+          "name": "value",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "[0, 1, 2, 3]",
+              "name": "example"
+            }
+          ],
+          "docs": "The value bytes of the descriptor.",
+          "complexTypes": [],
+          "type": "number[]"
+        }
+      ]
+    },
+    {
+      "name": "PermissionStatus",
+      "slug": "permissionstatus",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "bluetooth",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "Permission state for using bluetooth.\n\nOnly available on iOS.",
+          "complexTypes": [
+            "PermissionState"
+          ],
+          "type": "PermissionState"
+        },
+        {
+          "name": "bluetoothConnect",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "Permission state for connecting to a BLE device.\n\nOnly available on Android.",
+          "complexTypes": [
+            "PermissionState"
+          ],
+          "type": "PermissionState"
+        },
+        {
+          "name": "bluetoothScan",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "Permission state for scanning for BLE devices.\n\nOnly available on Android.",
+          "complexTypes": [
+            "PermissionState"
+          ],
+          "type": "PermissionState"
+        },
+        {
+          "name": "location",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "Permission state for using location services.\n\nOnly available on Android.",
+          "complexTypes": [
+            "PermissionState"
+          ],
+          "type": "PermissionState"
+        },
+        {
+          "name": "notifications",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            }
+          ],
+          "docs": "Permission state for using notifications.\n\nOnly available on Android.",
+          "complexTypes": [
+            "PermissionState"
+          ],
+          "type": "PermissionState"
+        }
+      ]
+    },
+    {
+      "name": "BluetoothLowEnergyPluginPermission",
+      "slug": "bluetoothlowenergypluginpermission",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "permissions",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [
+            "BluetoothLowEnergyPermissionType"
+          ],
+          "type": "BluetoothLowEnergyPermissionType[]"
+        }
+      ]
+    },
+    {
+      "name": "PluginListenerHandle",
+      "slug": "pluginlistenerhandle",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "remove",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "() => Promise<void>"
+        }
+      ]
+    },
+    {
+      "name": "CharacteristicChangedEvent",
+      "slug": "characteristicchangedevent",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "characteristicId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"00002A29-0000-1000-8000-00805F9B34FB\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The UUID of the characteristic.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "deviceId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"00:00:00:00:00:00\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The address of the device.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "serviceId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"0000180A-0000-1000-8000-00805F9B34FB\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The UUID of the service.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "value",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "[0, 1, 2, 3]",
+              "name": "example"
+            }
+          ],
+          "docs": "The changed value bytes of the characteristic.",
+          "complexTypes": [],
+          "type": "number[]"
+        }
+      ]
+    },
+    {
+      "name": "DeviceDisconnectedEvent",
+      "slug": "devicedisconnectedevent",
+      "docs": "",
+      "tags": [
+        {
+          "text": "6.0.0",
+          "name": "since"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "deviceId",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"00:00:00:00:00:00\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The address of the disconnected device.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "name",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"My Device\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The name of the disconnected device.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        }
+      ]
+    },
+    {
+      "name": "DeviceScannedEvent",
+      "slug": "devicescannedevent",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "id",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"00:00:00:00:00:00\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The address of the scanned device.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "name",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "\"My Device\"",
+              "name": "example"
+            }
+          ],
+          "docs": "The name of the scanned device.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "rssi",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "-50",
+              "name": "example"
+            }
+          ],
+          "docs": "The RSSI value of the scanned device.\n\nOnly available on iOS.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        }
+      ]
+    }
+  ],
+  "enums": [
+    {
+      "name": "ConnectionPriority",
+      "slug": "connectionpriority",
+      "members": [
+        {
+          "name": "BALANCED",
+          "value": "0",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "https ://developer.android.com/reference/android/bluetooth/BluetoothGatt#CONNECTION_PRIORITY_BALANCED",
+              "name": "see"
+            }
+          ],
+          "docs": "Balanced connection priority."
+        },
+        {
+          "name": "HIGH",
+          "value": "1",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "https ://developer.android.com/reference/android/bluetooth/BluetoothGatt#CONNECTION_PRIORITY_HIGH",
+              "name": "see"
+            }
+          ],
+          "docs": "High connection priority."
+        },
+        {
+          "name": "LOW_POWER",
+          "value": "2",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "https ://developer.android.com/reference/android/bluetooth/BluetoothGatt#CONNECTION_PRIORITY_LOW_POWER",
+              "name": "see"
+            }
+          ],
+          "docs": "Low power connection priority."
+        },
+        {
+          "name": "PRIORITY_DCK",
+          "value": "3",
+          "tags": [
+            {
+              "text": "6.0.0",
+              "name": "since"
+            },
+            {
+              "text": "https ://developer.android.com/reference/android/bluetooth/BluetoothGatt#CONNECTION_PRIORITY_DCK",
+              "name": "see"
+            }
+          ],
+          "docs": "Digital Car Key connection priority."
+        }
+      ]
+    }
+  ],
+  "typeAliases": [
+    {
+      "name": "PermissionState",
+      "slug": "permissionstate",
+      "docs": "",
+      "types": [
+        {
+          "text": "'prompt'",
+          "complexTypes": []
+        },
+        {
+          "text": "'prompt-with-rationale'",
+          "complexTypes": []
+        },
+        {
+          "text": "'granted'",
+          "complexTypes": []
+        },
+        {
+          "text": "'denied'",
+          "complexTypes": []
+        }
+      ]
+    },
+    {
+      "name": "BluetoothLowEnergyPermissionType",
+      "slug": "bluetoothlowenergypermissiontype",
+      "docs": "",
+      "types": [
+        {
+          "text": "'bluetooth'",
+          "complexTypes": []
+        },
+        {
+          "text": "'bluetoothConnect'",
+          "complexTypes": []
+        },
+        {
+          "text": "'bluetoothScan'",
+          "complexTypes": []
+        },
+        {
+          "text": "'location'",
+          "complexTypes": []
+        },
+        {
+          "text": "'notifications'",
+          "complexTypes": []
+        }
+      ]
+    }
+  ],
+  "pluginConfigs": []
+}
